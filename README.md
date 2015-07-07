@@ -1,6 +1,6 @@
 # ember-material (WIP)
 
-Google's [Material Design Lite] for Ember.js apps
+Google's [Material Design Lite](http://www.getmdl.io/) for Ember.js apps
 
 ## Installation
 

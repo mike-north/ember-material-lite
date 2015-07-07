@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-material'
+  name: 'ember-material-lite'
 };
