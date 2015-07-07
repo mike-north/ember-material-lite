@@ -13,12 +13,30 @@ ember install ember-material-lite
 
 ### Without SASS
 
+<img src="http://i59.tinypic.com/ih4lro.png" align="right" />
+
 This addon can be used without SASS (relying on pure CSS for styles). If you choose this path, you'll need to alter your app slightly.
 
 1. Delete the `ember-cli-sass` NPM dependency that the installation blueprint will add to your app. You may also remove the bower dependency on `material-design-lite-src`, making sure to leave the one for (`material-design-lite` in place)
 2. Your app.css should start with
 ```css
 @import "bower_components/material-design-lite/material.css";
+```
+
+## Configuration
+
+### Colors
+
+You can customize the colors of material design elements globally by setting sass variables prior to importing the main styles. 
+
+**app/styles/app.scss**
+```scss
+@import "_color-definitions";
+
+$color-primary: $palette-teal-500;
+$color-accent: $palette-pink-A200;
+
+@import "material-design-lite";
 ```
 
 ## Running Tests
