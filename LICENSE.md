@@ -1,4 +1,4 @@
-The MIT License (MIT)
+The MIT License (MIT) Mike North
 
 Copyright (c) 2015
 

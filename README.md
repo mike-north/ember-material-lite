@@ -1,6 +1,6 @@
-# Ember-material
+# ember-material (WIP)
 
-This README outlines the details of collaborating on this Ember addon.
+Google's [Material Design Lite] for Ember.js apps
 
 ## Installation
 
