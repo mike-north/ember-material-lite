@@ -1,4 +1,4 @@
-# ember-material (WIP)
+# ember-material-lite
 
 [![Build Status](https://travis-ci.org/truenorth/ember-material-lite.svg?branch=master)](https://travis-ci.org/truenorth/ember-material-lite)
 [![Dependency Status](https://david-dm.org/truenorth/ember-material-lite.svg)](https://david-dm.org/truenorth/ember-material-lite)
