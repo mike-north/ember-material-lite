@@ -4,14 +4,22 @@ Google's [Material Design Lite](http://www.getmdl.io/) for Ember.js apps
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```
+# ember-cli < 0.2.3
+ember install:addon ember-material-lite
+# ember-cli >= 0.2.3
+ember install ember-material-lite
+```
 
-## Running
+### Without SASS
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+This addon can be used without SASS (relying on pure CSS for styles). If you choose this path, you'll need to alter your app slightly.
+
+1. Delete the `ember-cli-sass` dependency that the installation blueprint will add to your app
+2. Your app.css should start with
+```css
+@import "bower_components/material-design-lite/material.css";
+```
 
 ## Running Tests
 
