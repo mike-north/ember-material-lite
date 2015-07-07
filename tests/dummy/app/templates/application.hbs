@@ -25,27 +25,9 @@
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content">
-		<!-- Raised disabled button-->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
-  Button
-</button>
-
-<!-- Colored FAB button -->
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-  <i class="material-icons">add</i>
-</button>
-
-<!-- Colored FAB button -->
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-  <i class="material-icons">add</i>
-</button>
-<!-- Colored FAB button -->
-<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-  <i class="material-icons">add</i>
-</button>
-    </div>
+  	<div class="mdl-grid">
+	{{outlet}}
+	</div>
   </main>
 </div>
 
-{{outlet}}

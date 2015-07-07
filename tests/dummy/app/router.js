@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('badges');
+	this.route('buttons');
 });
 
 export default Router;
