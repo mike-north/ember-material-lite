@@ -11,6 +11,8 @@
     "ember-resolver": "~0.1.15",
     "jquery": "^1.11.1",
     "loader.js": "ember-cli/loader.js#3.2.0",
-    "qunit": "~1.17.1"
+    "qunit": "~1.17.1",
+    "material-design-lite": "~1.0.0",
+    "material-design-lite-src": "google/material-design-lite#37286ae139b0ae336a8a7e9ed3b18ace1abff7ed"
   }
 }
