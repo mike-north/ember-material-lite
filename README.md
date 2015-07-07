@@ -7,6 +7,8 @@
 
 Google's [Material Design Lite](http://www.getmdl.io/) for Ember.js apps
 
+**This addon requires ember >= `1.11.0`**
+
 ## Installation
 
 ```
