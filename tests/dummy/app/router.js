@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('navs');
   this.route('icons');
   this.route('cards');
+  this.route('progress');
 });
 
 export default Router;
