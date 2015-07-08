@@ -4,6 +4,15 @@ import computed from 'ember-new-computed';
 const {computed: { empty, alias }} = Ember;
 
 export default Ember.Component.extend({
+  classNames: ['x-example', 'mdl-cell'],
+  classNameBindings: ['colClass'],
+  cols: 4,
+  colClass: computed('cols', {
+    get() {
+      return `mdl-cell--${this.get('cols')}-col`;
+    }
+  }),
+  title: 'Example',
   emptySnippet: empty('snippet'),
   exampleFrameClass: 'mdl-cell mdl-cell--12-col',
   partialName: computed('snippet', {

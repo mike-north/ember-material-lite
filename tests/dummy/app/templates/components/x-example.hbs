@@ -1,18 +1,27 @@
 {{#if emptySnippet}}
-<div class="row">
-  <div class="col s12">
+  {{#mdl-card title='Empty Content'}}
+  <div class="mdl-card__supporting-text">
     You must provide a snippet parameter
   </div>
-</div>
+  {{/mdl-card}}
 {{else}}
-<div class="mdl-grid">
-  <div class={{exampleFrameClass}}>
-    {{partial partialName}}
-  </div>
-</div>
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--12-col">
-    {{code-snippet name=snippetName}}
-  </div>
-</div>
+  {{#mdl-card title=title class='example-card'}}
+    <div class="mdl-card__supporting-text">
+      {{yield}}
+    </div>
+      {{#mdl-tabs active='Example'}}
+        {{#mdl-tab title='Example'}}
+          <div class="example">
+          {{partial partialName}}
+          </div>
+        {{/mdl-tab}}
+        {{#mdl-tab title='Code'}}
+          <div class="code">
+          {{code-snippet name=snippetName}}
+          </div>
+        {{/mdl-tab}}
+      {{/mdl-tabs}}
+
+  {{/mdl-card}}
+
 {{/if}}

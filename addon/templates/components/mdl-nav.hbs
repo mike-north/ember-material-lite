@@ -1,0 +1,24 @@
+<header class={{_headerClassString}}>
+  <div class="mdl-layout__header-row">
+    <span class="mdl-layout-title">{{title}}</span>
+    <div class="mdl-layout-spacer"></div>
+    <nav class="mdl-navigation mdl-layout--large-screen-only">
+      {{#each _navItems as |navItem|}}
+        {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
+      {{/each}}
+    </nav>
+  </div>
+</header>
+<div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Title</span>
+  <nav class="mdl-navigation">
+    {{#each _navItems as |navItem|}}
+      {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
+    {{/each}}
+  </nav>
+</div>
+<main class="mdl-layout__content">
+  <div class="page-content">
+    {{yield}}
+  </div>
+</main>

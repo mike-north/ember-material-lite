@@ -4,3 +4,22 @@ $color-primary: $palette-teal-500;
 $color-accent: $palette-pink-A200;
 
 @import "material-design-lite";
+
+@media (max-width: 600px) {
+  .x-example {
+    width: 100%;
+
+  }
+}
+
+.x-example {
+
+  .example-card {
+    width: 100%;
+    .example,
+    .code {
+      margin-top: 20px;
+      padding: 20px;
+    }
+  }
+}
