@@ -48,6 +48,6 @@
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
-    "demoURL": "http://mike.works/ember-material"
+    "demoURL": "http://mike.works/ember-material-lite"
   }
 }
