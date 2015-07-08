@@ -4,6 +4,7 @@
 [![Dependency Status](https://david-dm.org/truenorth/ember-material-lite.svg)](https://david-dm.org/truenorth/ember-material-lite)
 [![devDependency Status](https://david-dm.org/truenorth/ember-material-lite/dev-status.svg)](https://david-dm.org/truenorth/ember-material-lite#info=devDependencies)
 ![NPM Version](https://img.shields.io/npm/v/ember-material-lite.svg)
+[![Code Climate](https://codeclimate.com/github/truenorth/ember-material-lite/badges/gpa.svg)](https://codeclimate.com/github/truenorth/ember-material-lite)
 
 Google's [Material Design Lite](http://www.getmdl.io/) for Ember.js apps
 
