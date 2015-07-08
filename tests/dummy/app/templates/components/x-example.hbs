@@ -9,19 +9,13 @@
     <div class="mdl-card__supporting-text">
       {{yield}}
     </div>
-      {{#mdl-tabs active='Example'}}
-        {{#mdl-tab title='Example'}}
-          <div class="example">
-          {{partial partialName}}
-          </div>
-        {{/mdl-tab}}
-        {{#mdl-tab title='Code'}}
-          <div class="code">
-          {{code-snippet name=snippetName}}
-          </div>
-        {{/mdl-tab}}
-      {{/mdl-tabs}}
+    <div class="example">
+    {{partial partialName}}
+    </div>
 
+    <div class="code">
+    {{code-snippet name=snippetName}}
+    </div>
   {{/mdl-card}}
 
 {{/if}}
