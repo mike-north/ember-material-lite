@@ -4,7 +4,7 @@ import layout from '../templates/components/mdl-button';
 import computed from 'ember-new-computed';
 
 export default Ember.Component.extend(RippleSupport, {
-	tagName: 'button',
+  tagName: 'button',
   icon: null,
   isColored: true,
   isRaised: false,
@@ -17,7 +17,7 @@ export default Ember.Component.extend(RippleSupport, {
     }
   }),
   attributeBindings: ['disabled'],
-	classNames: ['mdl-button', 'mdl-js-button'],
+  classNames: ['mdl-button', 'mdl-js-button'],
   classNameBindings: [
     'isMiniFab:mdl-button--mini-fab',
     'isAccent:mdl-button--accent',
@@ -25,7 +25,7 @@ export default Ember.Component.extend(RippleSupport, {
     '_isIconMode:mdl-button--icon',
     'isColored:mdl-button--colored',
     'isFloating:mdl-button--fab'],
-	layout,
+  layout,
 
   click() {
     this.sendAction();
