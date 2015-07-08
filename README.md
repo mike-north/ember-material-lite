@@ -6,9 +6,13 @@
 ![NPM Version](https://img.shields.io/npm/v/ember-material-lite.svg)
 [![Code Climate](https://codeclimate.com/github/truenorth/ember-material-lite/badges/gpa.svg)](https://codeclimate.com/github/truenorth/ember-material-lite)
 
+<img src="http://i57.tinypic.com/ic6cdy.png" align="right" />
+
 Google's [Material Design Lite](http://www.getmdl.io/) for Ember.js apps
 
 **This addon requires ember >= `1.11.0`**
+
+**NOTICE: This library is under heavy development. Please expect APIs to change, components to be removed, added, etc... until a 1.0 release**
 
 ## Installation
 
