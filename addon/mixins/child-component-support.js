@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { assert } = Ember; 
+const { assert } = Ember;
 
 export default Ember.Mixin.create({
 
@@ -17,7 +17,7 @@ export default Ember.Mixin.create({
 
   _componentToRegisterTo() {
     let c = null;
-    let parentTypes = this.get('_parentComponentTypes'); 
+    let parentTypes = this.get('_parentComponentTypes');
     for (let i = 0; i < parentTypes.length && !c; i++) {
       c = this.nearestOfType(parentTypes[i]);
     }

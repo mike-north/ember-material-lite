@@ -1,4 +1,4 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import ParentComponentSupport from '../mixins/parent-component-support';
@@ -9,7 +9,7 @@ export default BaseComponent.extend(RippleSupport, ParentComponentSupport, {
   layout,
   classNames: ['mdl-tabs', 'mdl-js-tabs'],
   active: null,
- 
+
   didInsertElement() {
     this._super(...arguments);
     let activeTab = this.get('_childComponents').findBy('title', this.get('active'));

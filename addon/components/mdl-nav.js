@@ -1,4 +1,4 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 import ParentComponentSupport from '../mixins/parent-component-support';
 import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-nav';

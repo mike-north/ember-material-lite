@@ -1,4 +1,4 @@
-import Ember from 'ember';
+// import Ember from 'ember';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import layout from '../templates/components/mdl-button';
