@@ -1,12 +1,17 @@
-{{#mdl-nav title='Ember Material Design Lite' fixedHeader=true}}
-  {{mdl-nav-item name='Badges'    route='badges'}}
-  {{mdl-nav-item name='Buttons'   route='buttons'}}
-  {{mdl-nav-item name='Cards'     route='cards'}}
-  {{mdl-nav-item name='Icons'     route='icons'}}
-  {{mdl-nav-item name='Nav'       route='navs'}}
-  {{mdl-nav-item name='Tabs'      route='tabs'}}
-  {{mdl-nav-item name='Footers'   route='footer'}}
-  {{mdl-nav-item name='Progress'  route='progress'}}
+{{#mdl-nav title='Ember Material Design Lite'
+  mobileTitle='Ember MDL'
+  includeHeaderItems=false
+  includeDrawerTitle=false
+  fixedHeader=true
+  fixedDrawer=true}}
+    {{mdl-nav-item name='Badges'    route='badges'}}
+    {{mdl-nav-item name='Buttons'   route='buttons'}}
+    {{mdl-nav-item name='Cards'     route='cards'}}
+    {{mdl-nav-item name='Icons'     route='icons'}}
+    {{mdl-nav-item name='Nav'       route='navs'}}
+    {{mdl-nav-item name='Tabs'      route='tabs'}}
+    {{mdl-nav-item name='Footers'   route='footer'}}
+    {{mdl-nav-item name='Progress'  route='progress'}}
   <div class="mdl-grid">
     {{outlet}}
   </div>

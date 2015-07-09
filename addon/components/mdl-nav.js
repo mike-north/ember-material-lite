@@ -2,7 +2,9 @@
 import ParentComponentSupport from '../mixins/parent-component-support';
 import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-nav';
-import computed from 'ember-new-computed';
+import _computed from 'ember-new-computed';
+
+let { computed: { oneWay } } = Ember;
 
 export default BaseComponent.extend(ParentComponentSupport, {
   primaryClassName: 'layout',
@@ -11,14 +13,28 @@ export default BaseComponent.extend(ParentComponentSupport, {
     'fixedDrawer:mdl-layout--fixed-drawer'
   ],
   layout,
+  title: null,
+  mobileTitle: oneWay('title'),
   fixedHeader: false,
   fixedDrawer: false,
+  transparent: false,
   waterfallMenu: false,
-  _headerClassString: computed('waterfallMenu', {
+  scrollHeader: false,
+  includeHeader: true,
+  includeHeaderLinks: true,
+  includeDrawer: true,
+  includeDrawerTitle: true,
+  _headerClassString: _computed('waterfallMenu', {
     get() {
       let classes = ['mdl-layout__header'];
       if (this.get('waterfallMenu')) {
         classes.push('mdl-layout__header--waterfall');
+      }
+      if (this.get('scrollHeader')) {
+        classes.push('mdl-layout__header--scroll');
+      }
+      if (this.get('transparent')) {
+        classes.push('mdl-layout__header--transparent');
       }
       return classes.join(' ');
     }
