@@ -10,9 +10,11 @@ export default Ember.Mixin.create({
 
   registerChildComponent(childComponent) {
     this.get('_childComponents').addObject(childComponent);
+    childComponent.set('_parentComponent', this);
   },
 
   unregisterChildComponent(childComponent) {
+    childComponent.set('_parentComponent', null);
     this.get('_childComponents').removeObject(childComponent);
   }
 });
