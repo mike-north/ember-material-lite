@@ -1,12 +1,15 @@
 import Ember from 'ember';
+import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-progress';
 import computed from 'ember-new-computed';
 
 const { computed: { empty } } = Ember;
 
-export default Ember.Component.extend({
-  classNames: ['mdl-progress', 'mdl-js-progress'],
-  classNameBindings: ['indeterminate:mdl-progress__indeterminate'],
+export default BaseComponent.extend({
+  primaryClassName: 'progress',
+  classNameBindings: [
+    'indeterminate:mdl-progress__indeterminate'
+  ],
   _progress: null,
   _buffer: null,
   indeterminate: empty('progress'),

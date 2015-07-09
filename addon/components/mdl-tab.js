@@ -1,10 +1,12 @@
 import Ember from 'ember';
 import MdlTabs from './mdl-tabs';
+import ChildComponentSupport from '../mixins/child-component-support';
 import layout from '../templates/components/mdl-tab';
 import computed from 'ember-new-computed';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(ChildComponentSupport, {
   layout,
+  _parentComponentTypes: Ember.A([MdlTabs]),
   classNames: ['mdl-tabs__panel'],
   classNameBindings: ['isActive:is-active'],
   isActive: false,
@@ -12,24 +14,5 @@ export default Ember.Component.extend({
     get() {
       return Ember.String.dasherize(this.get('title'));
     }
-  }),
-  init() {
-    this._super(...arguments);
-    this._registerWithTabs();
-  },
-
-  willDestroyElement() {
-    this._super(...arguments);
-    this._unregisterWithTabs();
-  },
-
-  _registerWithTabs() {
-    let tabs = this.nearestOfType(MdlTabs);
-    tabs.registerTab(this);
-  },
-
-  _unregisterWithTabs() {
-    let tabs = this.nearestOfType(MdlTabs);
-    tabs.unregisterTab(this);
-  }
+  })
 });

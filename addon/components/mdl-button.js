@@ -1,9 +1,11 @@
 import Ember from 'ember';
+import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import layout from '../templates/components/mdl-button';
 import computed from 'ember-new-computed';
 
-export default Ember.Component.extend(RippleSupport, {
+export default BaseComponent.extend(RippleSupport, {
+  primaryClassName: 'button',
   tagName: 'button',
   icon: null,
   isColored: true,
@@ -17,7 +19,6 @@ export default Ember.Component.extend(RippleSupport, {
     }
   }),
   attributeBindings: ['disabled'],
-  classNames: ['mdl-button', 'mdl-js-button'],
   classNameBindings: [
     'isMiniFab:mdl-button--mini-fab',
     'isAccent:mdl-button--accent',

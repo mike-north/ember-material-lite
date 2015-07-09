@@ -3,7 +3,7 @@
     <span class="mdl-layout-title">{{title}}</span>
     <div class="mdl-layout-spacer"></div>
     <nav class="mdl-navigation mdl-layout--large-screen-only">
-      {{#each _navItems as |navItem|}}
+      {{#each _childComponents as |navItem|}}
         {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
       {{/each}}
     </nav>
@@ -12,7 +12,7 @@
 <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">Title</span>
   <nav class="mdl-navigation">
-    {{#each _navItems as |navItem|}}
+    {{#each _childComponents as |navItem|}}
       {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
     {{/each}}
   </nav>
