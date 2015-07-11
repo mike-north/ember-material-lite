@@ -1,6 +1,6 @@
 {
   "name": "ember-material-lite",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Material Design Lite for Ember.js Apps",
   "directories": {
     "doc": "doc",
@@ -11,8 +11,8 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "https://github.com/truenorth/ember-material.git",
-  "homepage": "https://github.com/truenorth/ember-material",
+  "repository": "https://github.com/truenorth/ember-material-lite.git",
+  "homepage": "https://github.com/truenorth/ember-material-lite",
   "engines": {
     "node": ">= 0.10.0"
   },
