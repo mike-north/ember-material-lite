@@ -1,5 +1,5 @@
-// import Ember from 'ember';
-import ParentComponentSupport from '../mixins/parent-component-support';
+import Ember from 'ember';
+import ParentComponentSupport from 'ember-composability/mixins/parent-component-support';
 import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-nav';
 import _computed from 'ember-new-computed';

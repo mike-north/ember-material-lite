@@ -1,11 +1,12 @@
 import Ember from 'ember';
 import MdlMiniFooter from './mdl-mini-footer';
 import MdlMegaFooter from './mdl-mega-footer';
-import ChildComponentSupport from '../mixins/child-component-support';
+import ChildComponentSupport from 'ember-composability/mixins/child-component-support';
+import BaseChildComponent from './-base-child-component';
 import layout from '../templates/components/mdl-footer-section';
 import computed from 'ember-new-computed';
 
-export default Ember.Component.extend(ChildComponentSupport, {
+export default BaseChildComponent.extend(ChildComponentSupport, {
   _parentComponentTypes: Ember.A([MdlMegaFooter, MdlMiniFooter]),
   layout,
   align: 'middle',

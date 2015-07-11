@@ -1,7 +1,7 @@
 // import Ember from 'ember';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
-import ParentComponentSupport from '../mixins/parent-component-support';
+import ParentComponentSupport from 'ember-composability/mixins/parent-component-support';
 import layout from '../templates/components/mdl-tabs';
 
 export default BaseComponent.extend(RippleSupport, ParentComponentSupport, {

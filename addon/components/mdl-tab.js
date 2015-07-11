@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import MdlTabs from './mdl-tabs';
-import ChildComponentSupport from '../mixins/child-component-support';
+import ChildComponentSupport from 'ember-composability/mixins/child-component-support';
 import layout from '../templates/components/mdl-tab';
 import computed from 'ember-new-computed';
 
