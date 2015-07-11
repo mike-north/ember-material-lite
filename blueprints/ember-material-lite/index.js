@@ -1,7 +1,7 @@
 var RSVP = require('rsvp');
 
 module.exports = {
-  description: 'install ember-material-lite into a typical projet'
+  description: 'install ember-material-lite into a typical project',
 
   beforeInstall: function (options) {
     return RSVP.all([
