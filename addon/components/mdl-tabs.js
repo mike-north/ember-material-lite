@@ -9,9 +9,12 @@ export default BaseComponent.extend(RippleSupport, ParentComponentSupport, {
   layout,
   classNames: ['mdl-tabs', 'mdl-js-tabs'],
   active: null,
+  _mdlComponent: null,
 
   didInsertElement() {
     this._super(...arguments);
+    let mdltabs = new window.MaterialTabs(this.get('element'));
+    this.set('_mdlComponent', mdltabs);
     let activeTab = this.get('_childComponents').findBy('title', this.get('active'));
     if (activeTab) {
       activeTab.set('isActive', true);

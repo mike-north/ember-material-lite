@@ -12,27 +12,29 @@ export default BaseComponent.extend({
   ],
   _progress: null,
   _buffer: null,
+  _mdlComponent: null,
+
   indeterminate: empty('progress'),
   layout,
 
   didInsertElement() {
     this._super(...arguments);
-    this.element.addEventListener('mdl-componentupgraded', function() {
-      this._updateProgress();
-      this._updateBuffer();
-    }.bind(this));
+    let mdlprogress = new window.MaterialProgress(this.get('element'));
+    this.set('_mdlComponent', mdlprogress);
+    this._updateProgress();
+    this._updateBuffer();
   },
 
   _updateProgress() {
     let progress = this.get('progress');
     if (progress !== null) {
-      this.element.MaterialProgress.setProgress(progress);
+      this.get('_mdlComponent').setProgress(progress);
     }
   },
   _updateBuffer() {
     let buffer = this.get('buffer');
     if (buffer !== null) {
-      this.element.MaterialProgress.setBuffer(buffer);
+      this.get('_mdlComponent').setBuffer(buffer);
     }
   },
 

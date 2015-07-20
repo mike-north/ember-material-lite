@@ -24,6 +24,7 @@ export default BaseComponent.extend(ParentComponentSupport, {
   includeHeaderLinks: true,
   includeDrawer: true,
   includeDrawerTitle: true,
+  _mdlComponent: null,
   _headerClassString: _computed('waterfallMenu', {
     get() {
       let classes = ['mdl-layout__header'];
@@ -38,5 +39,11 @@ export default BaseComponent.extend(ParentComponentSupport, {
       }
       return classes.join(' ');
     }
-  })
+  }),
+
+  didInsertElement() {
+    this._super(...arguments);
+    let mdlnav = new window.MaterialLayout(this.get('element'));
+    this.set('_mdlComponent', mdlnav);
+  }
 });

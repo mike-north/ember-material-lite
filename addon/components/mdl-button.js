@@ -13,6 +13,7 @@ export default BaseComponent.extend(RippleSupport, {
   isFloating: false,
   isMiniFab: false,
   isAccent: false,
+  _mdlComponent: null,
   _isIconMode: computed('icon', 'isFloating', {
     get() {
       return !this.get('isFloating') && this.get('icon');
@@ -27,6 +28,12 @@ export default BaseComponent.extend(RippleSupport, {
     'isColored:mdl-button--colored',
     'isFloating:mdl-button--fab'],
   layout,
+
+  didInsertElement() {
+    this._super(...arguments);
+    let mdlbtn = new window.MaterialButton(this.get('element'));
+    this.set('_mdlComponent', mdlbtn);
+  },
 
   click() {
     this.sendAction();

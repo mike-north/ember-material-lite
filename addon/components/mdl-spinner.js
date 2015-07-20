@@ -8,7 +8,13 @@ export default BaseComponent.extend({
     'isActive:is-active',
     'isSingleColor:mdl-spinner--single-color'
   ],
+  _mdlComponent: null,
   isActive: true,
   isSingleColor: false,
-  layout
+  layout,
+  didInsertElement() {
+    this._super(...arguments);
+    let mdlspinner = new window.MaterialSpinner(this.get('element'));
+    this.set('_mdlComponent', mdlspinner);
+  }
 });
