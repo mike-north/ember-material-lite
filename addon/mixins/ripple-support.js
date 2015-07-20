@@ -9,7 +9,6 @@ export default Ember.Mixin.create({
 
   _mdlComponentObserver: observer('_mdlComponent', function() {
     if (this.get('hasRipples')) {
-      console.log(this.$(`.${this.get('_rippleClass')}`)[0]);
       let mdlripples = new window.MaterialRipple(this.$(`.mdl-button__ripple-container`)[0]);
       this.set('_mdlRippleComponent', mdlripples);
     }
