@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('icons');
   this.route('cards');
   this.route('progress');
+  this.route('footer');
 });
 
 export default Router;

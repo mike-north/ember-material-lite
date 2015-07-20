@@ -12,6 +12,15 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    contentSecurityPolicy: {
+      'default-src': "'unsafe-inline'",
+      'script-src': "'self' 'unsafe-eval' 'unsafe-inline'",
+      'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+      'connect-src': "'self' ",
+      'img-src': "'self' data:",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'media-src': "'self'"
+    },
     sassOptions: {
       includePaths: ['bower_components/material-design-lite-src/src']
     },

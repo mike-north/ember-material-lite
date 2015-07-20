@@ -1,6 +1,6 @@
 {{_active}}
 <div class="mdl-tabs__tab-bar">
-  {{#each _tabs as |tab|}}
+  {{#each _childComponents as |tab|}}
     {{#if (eq tab.title active)}}
       <a class='mdl-tabs__tab is-active' href='#{{tab.dasherizedTitle}}' {{action 'tabClicked' tab}}>{{tab.title}}</a>
     {{else}}

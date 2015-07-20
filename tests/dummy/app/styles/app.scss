@@ -18,8 +18,19 @@ $color-accent: $palette-pink-A200;
     width: 100%;
     .example,
     .code {
-      margin-top: 20px;
-      padding: 20px;
+      .hljs {
+        margin: 0;
+      }
+      position: relative;
+      min-height: 150px;
+      margin: 20px;
+      border: 1px solid #aaa;
+      overflow: hidden;
     }
   }
+}
+
+
+.x-example.nav-bar-example .example {
+  height: 200px;
 }

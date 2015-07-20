@@ -1,35 +1,29 @@
-import Ember from 'ember';
+// import Ember from 'ember';
+import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
+import ParentComponentSupport from 'ember-composability/mixins/parent-component-support';
 import layout from '../templates/components/mdl-tabs';
 
-export default Ember.Component.extend(RippleSupport, {
+export default BaseComponent.extend(RippleSupport, ParentComponentSupport, {
+  parentClassName: 'tabs',
   layout,
   classNames: ['mdl-tabs', 'mdl-js-tabs'],
-  _tabs: [],
   active: null,
-  init() {
-    this._super(...arguments);
-    this.set('_tabs', Ember.A([]));
-  },
+  _mdlComponent: null,
+
   didInsertElement() {
     this._super(...arguments);
-    let activeTab = this.get('_tabs').findBy('title', this.get('active'));
+    let mdltabs = new window.MaterialTabs(this.get('element'));
+    this.set('_mdlComponent', mdltabs);
+    let activeTab = this.get('_childComponents').findBy('title', this.get('active'));
     if (activeTab) {
       activeTab.set('isActive', true);
     }
   },
 
-  registerTab(tab) {
-    this.get('_tabs').addObject(tab);
-  },
-
-  unregisterTab(tab) {
-    this.get('_tabs').removeObject(tab);
-  },
-
   actions: {
     tabClicked(tab) {
-      let activeTab = this.get('_tabs').findBy('title', this.get('active'));
+      let activeTab = this.get('_childComponents').findBy('title', this.get('active'));
       if (activeTab) {
         activeTab.set('isActive', false);
       }
