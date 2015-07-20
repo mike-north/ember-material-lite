@@ -5,6 +5,10 @@ $color-accent: $palette-pink-A200;
 
 @import "material-design-lite";
 
+body {
+  background-image: url('/images/paper_fibers.png');
+}
+
 @media (max-width: 600px) {
   .x-example {
     width: 100%;
@@ -22,7 +26,6 @@ $color-accent: $palette-pink-A200;
         margin: 0;
       }
       position: relative;
-      min-height: 150px;
       margin: 20px;
       border: 1px solid #aaa;
       overflow: hidden;
