@@ -7,6 +7,7 @@ export default BaseComponent.extend({
   layout,
   type: 'text',
   pattern: null,
+  disabled: false,
   errorMessage: null,
   expandableIcon: null,
   isLabelFloating: true,
