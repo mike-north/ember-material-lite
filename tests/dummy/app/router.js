@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('progress');
   this.route('footer');
   this.route('toggles');
+  this.route('tooltips');
 });
 
 export default Router;
