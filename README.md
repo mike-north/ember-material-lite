@@ -5,6 +5,7 @@
 [![devDependency Status](https://david-dm.org/truenorth/ember-material-lite/dev-status.svg)](https://david-dm.org/truenorth/ember-material-lite#info=devDependencies)
 ![NPM Version](https://img.shields.io/npm/v/ember-material-lite.svg)
 [![Code Climate](https://codeclimate.com/github/truenorth/ember-material-lite/badges/gpa.svg)](https://codeclimate.com/github/truenorth/ember-material-lite)
+[![Ember Observer Score](http://emberobserver.com/badges/ember-material-lite.svg)](http://emberobserver.com/addons/ember-material-lite)
 
 <img src="http://i57.tinypic.com/ic6cdy.png" align="right" />
 

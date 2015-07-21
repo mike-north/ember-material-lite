@@ -1,32 +1,5 @@
-<!-- Block syntax -->
-{{#mdl-button}}
-  Basic
-{{/mdl-button}}
-<!-- Opt out of color -->
-{{#mdl-button isColored=false}}
-  Colorless
-{{/mdl-button}}
-<!-- Inline syntax -->
-{{mdl-button
-  text='Inline'}}
-<!-- Raised example -->
-{{mdl-button
-  isRaised=true
-  text='Raised'}}
-
-{{mdl-button
-  isRaised=true
-  disabled=true
-  text='Raised'}}
-
-<!-- No Ripples -->
-{{mdl-button
-  isRaised=true
-  hasRipples=false
-  text='No Ripples'}}
-
-<!-- Accent -->
-{{mdl-button
-  isRaised=true
-  isAccent=true
-  text='Accent Raised'}}
+{{#mdl-button}} Basic {{/mdl-button}}
+{{mdl-button text='Inline'}}
+{{mdl-button text='Accent' isAccent=true}}
+{{#mdl-button isColored=false}}Colorless{{/mdl-button}}
+{{mdl}}
