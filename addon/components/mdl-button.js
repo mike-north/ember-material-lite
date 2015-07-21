@@ -14,12 +14,13 @@ export default BaseComponent.extend(RippleSupport, {
   isMiniFab: false,
   isAccent: false,
   _mdlComponent: null,
+  'for': null,
   _isIconMode: computed('icon', 'isFloating', {
     get() {
       return !this.get('isFloating') && this.get('icon');
     }
   }),
-  attributeBindings: ['disabled'],
+  attributeBindings: ['disabled', 'for'],
   classNameBindings: [
     'isMiniFab:mdl-button--mini-fab',
     'isAccent:mdl-button--accent',
