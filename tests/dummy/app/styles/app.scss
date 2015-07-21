@@ -8,6 +8,11 @@ $color-accent: $palette-pink-A200;
 body {
   background-image: url('/images/paper_fibers.png');
 }
+// BEGIN-SNIPPET layout-transparent
+.layout-transparent {
+  background: url('/images/transparent.jpg') center / cover;
+}
+// END-SNIPPET
 
 @media (max-width: 600px) {
   .x-example {
@@ -17,7 +22,12 @@ body {
 }
 
 .x-example {
-
+  &.tall200 .example-card .example {
+    height: 200px;
+  }
+  &.no-padding .example-card .example {
+    padding: 0;
+  }
   .example-card {
     width: 100%;
     .example,
@@ -33,11 +43,15 @@ body {
 
     .example {
       padding: 20px 5px;
+
     }
   }
 }
-
-
 .x-example.nav-bar-example .example {
   height: 200px;
+}
+
+
+.white-text {
+  color: #fff;
 }

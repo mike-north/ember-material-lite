@@ -2,17 +2,19 @@
 <h2>Buttons</h2>
 </div>
 
-{{#x-example snippet='mdl-button-basic' title='Basic Button' cols=12}}
+{{#x-example snippet='mdl-button-basic' title='Basic Button' anchor='basic' cols=12}}
 	A basic flat button
 {{/x-example}}
 
-{{#x-example snippet='mdl-button-raised' title='Raised Button' cols=12}}
+{{#x-example snippet='mdl-button-raised' title='Raised Button' anchor='raised' cols=12 }}
 	Raised buttons has 
 {{/x-example}}
 
-{{#x-example snippet='mdl-button-float' title='Floating Action Buttons' cols=12}}
+{{#x-example snippet='mdl-button-float' title='Floating Action Buttons' anchor='floating' cols=12}}
 {{/x-example}}
 
-{{#x-example snippet='mdl-button-icon' title='Button w/ Icon' cols=12}}
+{{#x-example snippet='mdl-button-icon' title='Button w/ Icon' anchor='icon' cols=12}}
+{{link-to 'Go to Third' 'buttons'
+  (query-params anchor='basic') }}
   You can use an icon instead of text (not in addition to)
 {{/x-example}}
