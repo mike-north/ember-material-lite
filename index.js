@@ -14,6 +14,10 @@ module.exports = {
     app.import(app.bowerDirectory + '/material-design-lite-src/src/progress/progress.js');
     app.import(app.bowerDirectory + '/material-design-lite-src/src/spinner/spinner.js');
     app.import(app.bowerDirectory + '/material-design-lite-src/src/tabs/tabs.js');
+    app.import(app.bowerDirectory + '/material-design-lite-src/src/switch/switch.js');
+    app.import(app.bowerDirectory + '/material-design-lite-src/src/checkbox/checkbox.js');
+    app.import(app.bowerDirectory + '/material-design-lite-src/src/radio/radio.js');
+    app.import(app.bowerDirectory + '/material-design-lite-src/src/icon-toggle/icon-toggle.js');
 
   	app.import(app.bowerDirectory + '/material-design-lite/material.css', { destDir: 'material-design-lite/css' });
   }
