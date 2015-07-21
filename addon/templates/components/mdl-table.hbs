@@ -1,1 +1,14 @@
-{{yield}}
+<thead>
+	<tr>
+	{{#each composableChildren as |child|}}
+		<th>{{child.label}}</th>
+	{{/each}}		
+	</tr>
+</thead>
+<tbody>
+	{{#each content as |row|}}
+	<tr>
+		{{yield row}}
+	</tr>
+	{{/each}}
+</tbody>

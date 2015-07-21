@@ -3,10 +3,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    snippetSearchPaths: ['tests/dummy', 'app', 'addon'],
-    snippetPaths: ['tests/dummy/app/templates/snippets']
   });
-
+  app.options.snippetPaths = ['tests/dummy/app/templates/snippets'];
+  app.options.snippetSearchPaths = ['tests/dummy', 'app', 'addon'];
   /*
     This build file specifes the options for the dummy test app of this
     addon, located in `/tests/dummy`
