@@ -2,10 +2,10 @@ import Ember from 'ember';
 import { initialize } from '../../../initializers/material-lite-extensions';
 import { module, test } from 'qunit';
 
-var container, application;
+let container, application;
 
 module('Unit | Initializer | material lite extensions', {
-  beforeEach: function() {
+  beforeEach() {
     Ember.run(function() {
       application = Ember.Application.create();
       container = application.__container__;
