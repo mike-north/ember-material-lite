@@ -3,7 +3,7 @@ import layout from '../templates/components/mdl-textfield';
 
 export default BaseComponent.extend({
   pattern: null,
-  errorMessage: null,  
+  errorMessage: null,
   isExpandable: false,
   expandableIcon: null,
   layout,
