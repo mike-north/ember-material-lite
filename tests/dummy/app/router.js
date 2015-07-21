@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('cards');
   this.route('progress');
   this.route('footer');
+  this.route('table');
   this.route('textfields');
   this.route('toggles');
   this.route('tooltips');
