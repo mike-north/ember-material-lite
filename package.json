@@ -36,6 +36,7 @@
     "ember-disable-prototype-extensions": "^1.0.0",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.2",
+    "ember-legacy-views": "0.2.0",
     "ember-new-computed": "1.0.2",
     "ember-suave": "0.1.11",
     "ember-truth-helpers": "1.0.0",
