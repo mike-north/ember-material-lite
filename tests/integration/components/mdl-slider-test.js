@@ -12,7 +12,6 @@ test('it renders', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{mdl-slider}}`);
-
-  assert.equal(this.$().text(), '');
+  assert.equal(this.$().text().trim(), '');
 
 });
