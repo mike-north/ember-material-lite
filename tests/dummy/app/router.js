@@ -8,14 +8,15 @@ let Router = Ember.Router.extend({
 Router.map(function() {
   this.route('badges');
   this.route('buttons');
-  this.route('tabs');
-  this.route('navs');
-  this.route('icons');
   this.route('cards');
-  this.route('progress');
   this.route('footer');
+  this.route('icons');
+  this.route('menus');
+  this.route('navs');
+  this.route('progress');
   this.route('sliders');
   this.route('table');
+  this.route('tabs');
   this.route('textfields');
   this.route('toggles');
   this.route('tooltips');
