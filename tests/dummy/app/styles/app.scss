@@ -21,6 +21,15 @@ body {
   }
 }
 
+.right {
+  float: right;
+}
+
+.absolute-bottom-0 {
+  position: absolute;
+  bottom: 0;
+}
+
 .x-example {
   &.tall200 .example-card .example {
     height: 200px;

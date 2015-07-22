@@ -4,6 +4,7 @@ import _computed from 'ember-new-computed';
 export default Ember.Component.extend({
   childComponentClassName: null,
   classNameBindings: ['_childComponentClassString'],
+  _childComponentClassStringDelimeter: '--',
   _childComponentClassString: _computed('composableParent', 'childComponentClassName', {
     get() {
       let cccn = this.get('childComponentClassName');
@@ -11,7 +12,7 @@ export default Ember.Component.extend({
         return '';
       } else {
         let parentComponent = this.get('composableParent');
-        return `${parentComponent.get('_primaryClassNameString')}--${this.get('childComponentClassName')}`;
+        return `${parentComponent.get('_primaryClassNameString')}${this.get('_childComponentClassStringDelimeter')}${this.get('childComponentClassName')}`;
       }
     }
   })
