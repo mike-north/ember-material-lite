@@ -13,6 +13,6 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{mdl-slider}}`);
 
-  assert.equal(this.$().text(), '');
+  assert.equal(this.$().text().trim(), '');
 
 });
