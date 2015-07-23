@@ -6,6 +6,7 @@ import computed from 'ember-new-computed';
 export default Ember.Component.extend(ParentComponentSupport, {
   layout,
   _primaryClassNameString: 'mdl-menu',
+  icon: 'more_vert',
   didInsertElement() {
     this._super(...arguments);
     const mdlmenu = new window.MaterialMenu(this.$('ul')[0]);
