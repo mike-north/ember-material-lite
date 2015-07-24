@@ -1,6 +1,6 @@
 # Change Log
 
-## [v0.0.12](https://github.com/truenorth/ember-material-lite/tree/v0.0.11) (2015-07-23)
+## [v0.0.12](https://github.com/truenorth/ember-material-lite/tree/v0.0.12) (2015-07-23)
 
 [Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.0.11...v0.0.12)
 
