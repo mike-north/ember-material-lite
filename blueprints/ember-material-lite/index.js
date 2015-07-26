@@ -1,22 +1,25 @@
-var RSVP = require('rsvp');
+var RSVP  = require('rsvp');
+var chalk = require('chalk');
 
 module.exports = {
   description: 'install ember-material-lite into a typical project',
 
   beforeInstall: function (options) {
     return RSVP.all([
-      this.addBowerPackageToProject('material-design-lite', '1.0.0')
+      this.addBowerPackageToProject('material-design-lite', '~1.0.1')
     ]);
   },
 
   afterInstall: function () {
-    this.ui.writeLine('\n\n\nIf you wish to work with SASS, please add the following to your bower.json');
-    this.ui.writeLine("'material-design-lite-src': 'https://github.com/google/material-design-lite.git#37286ae139b0ae336a8a7e9ed3b18ace1abff7ed',");
-    this.ui.writeLine('\n\n\nAdd the following to your app/index.html for icons to work');
-    this.ui.writeLine('<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">\n');
     return RSVP.all([
-      this.addPackageToProject('ember-cli-sass', '^3.3.0')
-    ]);
-
+      this.addPackageToProject('ember-cli-sass', '^3.3.0'),
+      this.addPackageToProject('ember-new-computed', '~1.0.0'),
+      this.addPackageToProject('ember-legacy-views', '~0.2.0')
+    ]).then(function () {
+      this.ui.writeLine('\n' +
+        chalk.bgGreen.black('NOTICE: If you have a reference to "material-design-lite-src" in your bower.json, you may now remove it safely.') +
+        '\n'
+      );
+    }.bind(this));
   }
 };
