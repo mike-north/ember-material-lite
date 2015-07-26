@@ -5,7 +5,7 @@
     <div class="mdl-layout-spacer"></div>
     {{#if includeHeaderLinks}}
     <nav class="mdl-navigation mdl-layout--large-screen-only">
-      {{#each _childComponents as |navItem|}}
+      {{#each _headerNavItems as |navItem|}}
         {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
       {{/each}}
     </nav>
@@ -19,7 +19,7 @@
   <span class="mdl-layout-title">{{mobileTitle}}</span>
   {{/if}}
   <nav class="mdl-navigation">
-    {{#each _childComponents as |navItem|}}
+    {{#each _drawerNavItems as |navItem|}}
       {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
     {{/each}}
   </nav>

@@ -25,6 +25,17 @@ export default BaseComponent.extend(ParentComponentSupport, {
   includeDrawer: true,
   includeDrawerTitle: true,
   _mdlComponent: null,
+  _drawerNavItems: _computed('_childComponents.[]', '_childComponents.@each.inDrawer', {
+    get() {
+      return this.get('_childComponents').filterBy('inDrawer', true);
+    }
+  }),
+  _headerNavItems: _computed('_childComponents.[]', '_childComponents.@each.inHeader', {
+    get() {
+      return this.get('_childComponents').filterBy('inHeader', true);
+    }
+  }),
+
   _headerClassString: _computed('waterfallMenu', {
     get() {
       let classes = ['mdl-layout__header'];
