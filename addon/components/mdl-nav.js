@@ -27,12 +27,12 @@ export default BaseComponent.extend(ParentComponentSupport, {
   _mdlComponent: null,
   _drawerNavItems: _computed('_childComponents.[]', '_childComponents.@each.inDrawer', {
     get() {
-      return this.get('_childComponents').filterBy('inDrawer', true);
+      return Ember.A(this.get('_childComponents').filterBy('inDrawer', true));
     }
   }),
   _headerNavItems: _computed('_childComponents.[]', '_childComponents.@each.inHeader', {
     get() {
-      return this.get('_childComponents').filterBy('inHeader', true);
+      return Ember.A(this.get('_childComponents').filterBy('inHeader', true));
     }
   }),
 
