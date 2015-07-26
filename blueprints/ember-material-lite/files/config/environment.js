@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: '',
+    modulePrefix: '<%= dasherizedPackageName %>',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -13,7 +13,7 @@ module.exports = function(environment) {
       }
     },
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite-src/src']
+      includePaths: ['bower_components/material-design-lite/src']
     },
     APP: {
       // Here you can pass flags/options to your application instance
