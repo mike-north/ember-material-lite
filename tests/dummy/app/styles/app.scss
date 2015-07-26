@@ -17,7 +17,9 @@ body {
 @media (max-width: 600px) {
   .x-example {
     width: 100%;
-
+  }
+  .mdl-layout__drawer .mdl-navigation .mdl-navigation__link.github-link.drawer {
+    display: inherit;
   }
 }
 
@@ -64,3 +66,26 @@ body {
 .white-text {
   color: #fff;
 }
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link.github-link,
+.mdl-layout__header-row .mdl-navigation .mdl-navigation__link.github-link {
+  &.drawer {
+    display: none;
+    .material-icons {
+      top: -3px;
+    }
+  }
+  .material-icons {
+    position: relative;
+    top: 7px;
+  }
+}
+@media (max-width: 600px) {
+  .x-example {
+    width: 100%;
+  }
+  .mdl-layout__drawer .mdl-navigation .mdl-navigation__link.github-link.drawer {
+    display: inherit;
+  }
+}
+
