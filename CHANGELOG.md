@@ -1,5 +1,13 @@
 # Change Log
 
+## [v0.1.1](https://github.com/truenorth/ember-material-lite/tree/v0.1.1) (2015-07-26)
+
+[Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.1.0...v0.1.1)
+
+**Merged pull requests:**
+
+- Nav item flexibility [\#25](https://github.com/truenorth/ember-material-lite/pull/25) ([truenorth](https://github.com/truenorth))
+
 ## [v0.1.0](https://github.com/truenorth/ember-material-lite/tree/v0.1.0) (2015-07-26)
 
 [Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.0.12...v0.1.0)
