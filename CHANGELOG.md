@@ -1,5 +1,17 @@
 # Change Log
 
+## [v0.1.2](https://github.com/truenorth/ember-material-lite/tree/v0.1.2) (2015-07-26)
+
+[Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.1.1...v0.1.2)
+
+**Fixed bugs:**
+
+- Broken styling on mega-footer [\#26](https://github.com/truenorth/ember-material-lite/issues/26)
+
+**Merged pull requests:**
+
+- Composable parent fix for mdl-footer-dropdown-section [\#27](https://github.com/truenorth/ember-material-lite/pull/27) ([truenorth](https://github.com/truenorth))
+
 ## [v0.1.1](https://github.com/truenorth/ember-material-lite/tree/v0.1.1) (2015-07-26)
 
 [Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.1.0...v0.1.1)
