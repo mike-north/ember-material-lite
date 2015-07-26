@@ -46,8 +46,9 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-htmlbars": "0.7.9",
+    "chalk": "^1.1.0",
     "ember-cli-babel": "^5.0.0",
+    "ember-cli-htmlbars": "0.7.9",
     "rsvp": "^3.0.0"
   },
   "ember-addon": {
