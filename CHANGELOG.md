@@ -1,6 +1,18 @@
 # Change Log
 
-## [v0.0.12](https://github.com/truenorth/ember-material-lite/tree/v0.0.12) (2015-07-23)
+## [v0.1.0](https://github.com/truenorth/ember-material-lite/tree/v0.1.0) (2015-07-26)
+
+[Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.0.12...v0.1.0)
+
+**Fixed bugs:**
+
+- Fails on Install [\#8](https://github.com/truenorth/ember-material-lite/issues/8)
+
+**Merged pull requests:**
+
+- Update to MDL 1.0.1 [\#24](https://github.com/truenorth/ember-material-lite/pull/24) ([truenorth](https://github.com/truenorth))
+
+## [v0.0.12](https://github.com/truenorth/ember-material-lite/tree/v0.0.12) (2015-07-24)
 
 [Full Changelog](https://github.com/truenorth/ember-material-lite/compare/v0.0.11...v0.0.12)
 
