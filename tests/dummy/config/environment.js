@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'media-src': "'self'"
     },
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite-src/src']
+      includePaths: ['bower_components/material-design-lite/src']
     },
     APP: {
       // Here you can pass flags/options to your application instance
