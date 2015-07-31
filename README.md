@@ -1,10 +1,10 @@
 # ember-material-lite
 
-[![Build Status](https://travis-ci.org/truenorth/ember-material-lite.svg?branch=master)](https://travis-ci.org/truenorth/ember-material-lite)
-[![Dependency Status](https://david-dm.org/truenorth/ember-material-lite.svg)](https://david-dm.org/truenorth/ember-material-lite)
-[![devDependency Status](https://david-dm.org/truenorth/ember-material-lite/dev-status.svg)](https://david-dm.org/truenorth/ember-material-lite#info=devDependencies)
+[![Build Status](https://travis-ci.org/mike-north/ember-material-lite.svg?branch=master)](https://travis-ci.org/mike-north/ember-material-lite)
+[![Dependency Status](https://david-dm.org/mike-north/ember-material-lite.svg)](https://david-dm.org/mike-north/ember-material-lite)
+[![devDependency Status](https://david-dm.org/mike-north/ember-material-lite/dev-status.svg)](https://david-dm.org/mike-north/ember-material-lite#info=devDependencies)
 ![NPM Version](https://img.shields.io/npm/v/ember-material-lite.svg)
-[![Code Climate](https://codeclimate.com/github/truenorth/ember-material-lite/badges/gpa.svg)](https://codeclimate.com/github/truenorth/ember-material-lite)
+[![Code Climate](https://codeclimate.com/github/mike-north/ember-material-lite/badges/gpa.svg)](https://codeclimate.com/github/mike-north/ember-material-lite)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-material-lite.svg)](http://emberobserver.com/addons/ember-material-lite)
 
 <img src="http://i57.tinypic.com/ic6cdy.png" align="right" />
