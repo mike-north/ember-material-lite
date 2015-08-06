@@ -6,6 +6,7 @@
 ![NPM Version](https://img.shields.io/npm/v/ember-material-lite.svg)
 [![Code Climate](https://codeclimate.com/github/truenorth/ember-material-lite/badges/gpa.svg)](https://codeclimate.com/github/truenorth/ember-material-lite)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-material-lite.svg)](http://emberobserver.com/addons/ember-material-lite)
+[![Coverage Status](https://coveralls.io/repos/mike-north/ember-material-lite/badge.svg?branch=master&service=github)](https://coveralls.io/github/mike-north/ember-material-lite?branch=master)
 
 <img src="http://i57.tinypic.com/ic6cdy.png" align="right" />
 

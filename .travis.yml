@@ -39,6 +39,9 @@ install:
 script:
   - ember try $EMBER_TRY_SCENARIO test
 
+after_script:
+  - cat lcov.dat | coveralls
+
 after_success:
 # Remove the downloaded copy of phantomJS
 - rm -rf travis-phantomjs
