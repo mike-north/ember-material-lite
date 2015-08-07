@@ -40,7 +40,7 @@ script:
   - ember try $EMBER_TRY_SCENARIO test
 
 after_script:
-  - sed -i 's/SF:ember-material-lite\/\(.*\)/SF:addon\/\1.js/' lcov.dat;
+  - sed -i -- 's/SF:ember-material-lite\/\(.*\)/SF:addon\/\1.js/' lcov.dat
   - cat lcov.dat | coveralls
 
 after_success:
