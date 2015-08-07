@@ -8,6 +8,7 @@ export default BaseToggleComponent.extend({
   didInsertElement() {
     this._super(...arguments);
     let mdlradio = new window.MaterialRadio(this.get('element'));
+    this.element.MaterialRadio = mdlradio;
     this.set('_mdlComponent', mdlradio);
   }
 });
