@@ -42,7 +42,8 @@ script:
 after_script:
   - sed -i -- 's/SF:ember-material-lite\/\(.*\)/SF:addon\/\1.js/' lcov.dat
   - pwd
-  - ls -all
+  - ls -all assets
+  - ls -all dist
   - cat lcov.dat | coveralls
 
 after_success:
