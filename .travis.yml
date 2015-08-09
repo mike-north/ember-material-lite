@@ -39,6 +39,13 @@ install:
 script:
   - ember try $EMBER_TRY_SCENARIO test
 
+after_script:
+  - sed -i -- 's/SF:ember-material-lite\/\(.*\)/SF:addon\/\1.js/' lcov.dat
+  - pwd
+  - ls -all assets
+  - ls -all dist
+  - cat lcov.dat | coveralls
+
 after_success:
 # Remove the downloaded copy of phantomJS
 - rm -rf travis-phantomjs
@@ -55,3 +62,4 @@ after_success:
 # new commit already made (but not pushed)
 # Push the new commit
 - /bin/bash lib/try-generate-pages.sh
+- git checkout master
