@@ -5,7 +5,8 @@ module.exports = {
   name: 'ember-material-lite',
 
   included: function(app) {
-    this._super.included(app);
+    this._super.included.apply(this, arguments);
+
     app.vendorFiles['componentHandlerShim.js'] = 'vendor/componentHandlerShim.js';
     app.legacyFilesToAppend.push('vendor/componentHandlerShim.js');
     app.import(app.bowerDirectory + '/material-design-lite/src/button/button.js');
