@@ -1,5 +1,5 @@
 export function componentIsRipplified(assert, ctxt, params) {
-  let component = ctxt.subject();
+  let component = ctxt.subject(params);
   assert.equal(component._state, 'preRender');
   ctxt.render();
   assert.equal(component._state, 'inDOM');
