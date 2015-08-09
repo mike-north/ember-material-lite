@@ -1,4 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
+import { componentDisabledTest } from './-general-helpers';
 
 moduleForComponent('mdl-radio', 'Unit | Component | mdl radio', {
   // Specify the other units that are required for this test
@@ -17,3 +18,5 @@ test('it renders', function(assert) {
   this.render();
   assert.equal(component._state, 'inDOM');
 });
+
+test('Component disables properly', componentDisabledTest('input'));
