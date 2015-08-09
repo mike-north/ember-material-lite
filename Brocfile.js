@@ -16,4 +16,6 @@ var app = new EmberAddon({
 	snippetPaths: ['tests/dummy/app/templates/snippets']
 });
 
+app.import('vendor/highlight.pack.js');
+
 module.exports = app.toTree();
