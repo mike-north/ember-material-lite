@@ -37,6 +37,6 @@ export default BaseComponent.extend(RippleSupport, {
   },
 
   click() {
-    this.sendAction();
+    this.sendAction(this);
   }
 });
