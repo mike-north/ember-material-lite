@@ -15,7 +15,7 @@ module.exports = {
       this.addPackageToProject('ember-cli-sass', '^3.3.0'),
       this.addPackageToProject('ember-new-computed', '~1.0.0'),
       this.addPackageToProject('ember-legacy-views', '~0.2.0'),
-      this.addPackageToProject('ember-truth-helpers', '1.0.0'),
+      this.addPackageToProject('ember-truth-helpers', '~1.1.0'),
       this.addPackageToProject('ember-composability', '~0.1.3'),
     ]);
   }
