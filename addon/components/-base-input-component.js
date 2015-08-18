@@ -1,5 +1,7 @@
+import Ember from 'ember';
 import BaseComponent from './-base-toplevel-component';
-import computed from 'ember-new-computed';
+
+const { computed } = Ember;
 
 export default BaseComponent.extend({
   primaryClassName: 'textfield',
@@ -11,10 +13,8 @@ export default BaseComponent.extend({
   ],
   // This should never change, so we deliberately
   //   declare no dependent property keys
-  _inputId: computed({
-    get() {
-      return `${this.get('elementId')}-input`;
-    }
+  _inputId: computed(function() {
+    return `${this.get('elementId')}-input`;
   }),
   beforeMdlInit() {},
   didInsertElement() {

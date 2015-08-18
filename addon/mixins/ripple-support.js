@@ -1,14 +1,11 @@
 import Ember from 'ember';
-import computed from 'ember-new-computed';
 
-const { observer } = Ember;
+const { computed, observer } = Ember;
 
 export default Ember.Mixin.create({
   hasRipples: true,
-  _rippleClass: computed('_primaryClassNameString', {
-    get() {
-      return `${this.get('_primaryClassNameString')}__ripple-container`;
-    }
+  _rippleClass: computed('_primaryClassNameString', function() {
+    return `${this.get('_primaryClassNameString')}__ripple-container`;
   }),
   classNameBindings: ['hasRipples:mdl-js-ripple-effect'],
 

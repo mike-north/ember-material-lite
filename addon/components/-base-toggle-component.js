@@ -1,17 +1,16 @@
+import Ember from 'ember';
 import BaseToplevelComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import layout from '../templates/components/mdl-checkbox';
 
-import computed from 'ember-new-computed';
+const { computed } = Ember;
 
 export default BaseToplevelComponent.extend(RippleSupport, {
   tagName: 'label',
   layout,
   value: false,
   attributeBindings: ['_inputId:for'],
-  _inputId: computed('elementId', {
-    get() {
-      return `${this.get('elementId')}-input`;
-    }
+  _inputId: computed('elementId', function() {
+    return `${this.get('elementId')}-input`;
   })
 });
