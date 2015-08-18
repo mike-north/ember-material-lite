@@ -6,7 +6,7 @@ module.exports = {
 
   beforeInstall: function (options) {
     return RSVP.all([
-      this.addBowerPackageToProject('material-design-lite', '~1.0.2')
+      this.addBowerPackageToProject('material-design-lite', '~1.0.3')
     ]);
   },
 
@@ -16,7 +16,7 @@ module.exports = {
       this.addPackageToProject('ember-new-computed', '~1.0.0'),
       this.addPackageToProject('ember-legacy-views', '~0.2.0'),
       this.addPackageToProject('ember-truth-helpers', '1.0.0'),
-      this.addPackageToProject('ember-composability', '^0.0.1'),
+      this.addPackageToProject('ember-composability', '~0.1.3'),
     ]);
   }
 };
