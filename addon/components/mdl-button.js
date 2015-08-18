@@ -1,8 +1,9 @@
-// import Ember from 'ember';
+import Ember from 'ember';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import layout from '../templates/components/mdl-button';
-import computed from 'ember-new-computed';
+
+const { computed } = Ember;
 
 export default BaseComponent.extend(RippleSupport, {
   primaryClassName: 'button',
@@ -15,10 +16,8 @@ export default BaseComponent.extend(RippleSupport, {
   isAccent: false,
   _mdlComponent: null,
   'for': null,
-  _isIconMode: computed('icon', 'isFloating', {
-    get() {
-      return !this.get('isFloating') && this.get('icon');
-    }
+  _isIconMode: computed('icon', 'isFloating', function() {
+    return !this.get('isFloating') && this.get('icon');
   }),
   attributeBindings: ['disabled', 'for'],
   classNameBindings: [

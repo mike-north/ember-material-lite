@@ -31,6 +31,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.EmberENV.RAISE_ON_DEPRECATION = true;//!process.env['ALLOW_DEPRECATIONS'];
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -39,6 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'test') {
+    ENV.EmberENV.RAISE_ON_DEPRECATION = !process.env['ALLOW_DEPRECATIONS'];
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';

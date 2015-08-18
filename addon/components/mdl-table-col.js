@@ -4,18 +4,18 @@ import ChildComponentSupport from 'ember-composability/mixins/child-component-su
 import MdlTable from './mdl-table';
 import layout from '../templates/components/mdl-table-col';
 
-const { isEmpty } = Ember;
+const { isEmpty, A } = Ember;
 
 export default BaseComponent.extend(ChildComponentSupport, {
-  _parentComponentTypes: Ember.A([MdlTable]),
+  _parentComponentTypes: new A([MdlTable]),
   tagName: 'td',
   layout,
   shouldRegisterToParent(parentComponent) {
-    const childComponents = parentComponent.get('_childComponents');
+    const childComponents = parentComponent.get('composableChildren');
     if (isEmpty(childComponents)) {
       return true;
     } else {
-      const labels = parentComponent.get('_childComponents').mapBy('label');
+      const labels = parentComponent.get('composableChildren').map(x => x.label);
       return labels.indexOf(this.get('label')) < 0;
     }
   }

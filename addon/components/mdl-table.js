@@ -6,6 +6,7 @@ import layout from '../templates/components/mdl-table';
 export default BaseComponent.extend(ParentComponentSupport, ShadowSupport, {
   primaryClassName: 'data-table',
   tagName: 'table',
+  composableChildrenDebounceTime: 1,
   layout,
   didInsertElement() {
     this._super(...arguments);
