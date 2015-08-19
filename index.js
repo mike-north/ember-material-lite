@@ -24,7 +24,5 @@ module.exports = {
     app.import(app.bowerDirectory + '/material-design-lite/src/tabs/tabs.js');
     app.import(app.bowerDirectory + '/material-design-lite/src/textfield/textfield.js');
     app.import(app.bowerDirectory + '/material-design-lite/src/tooltip/tooltip.js');
-
-    app.import(app.bowerDirectory + '/material-design-lite/material.css', { destDir: 'material-design-lite/css' });
   }
 };
