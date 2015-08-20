@@ -11,11 +11,11 @@ export default BaseComponent.extend(ChildComponentSupport, {
   tagName: 'td',
   layout,
   shouldRegisterToParent(parentComponent) {
-    const childComponents = parentComponent.get('composableChildren');
+    const childComponents = parentComponent.getComposableChildren();
     if (isEmpty(childComponents)) {
       return true;
     } else {
-      const labels = parentComponent.get('composableChildren').map(x => x.label);
+      const labels = parentComponent.getComposableChildren().map(x => x.label);
       return labels.indexOf(this.get('label')) < 0;
     }
   }
