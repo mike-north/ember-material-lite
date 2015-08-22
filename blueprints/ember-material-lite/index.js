@@ -3,6 +3,7 @@ var chalk = require('chalk');
 
 module.exports = {
   description: 'install ember-material-lite into a typical project',
+  normalizeEntityName: function() {}, // no-op since we're just adding dependencies
 
   beforeInstall: function (options) {
     return RSVP.all([
