@@ -4,6 +4,7 @@ import layout from '../templates/components/mdl-radio';
 export default BaseToggleComponent.extend({
   primaryClassName: 'radio',
   layout,
+  checked: false,
 
   didInsertElement() {
     this._super(...arguments);
