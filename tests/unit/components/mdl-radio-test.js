@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import { componentDisabledTest } from './-general-helpers';
 
@@ -20,3 +21,16 @@ test('it renders', function(assert) {
 });
 
 test('Component disables properly', componentDisabledTest('input'));
+
+test('checked property is set', function(assert) {
+  assert.expect(1);
+
+  // Creates the component instance
+  const component = this.subject({ checked: true });
+
+  // Renders the component to the page
+  this.render();
+
+  // Test the checked state
+  assert.equal(this.$('input').is(':checked'), true);
+});
