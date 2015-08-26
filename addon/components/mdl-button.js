@@ -1,11 +1,12 @@
 import Ember from 'ember';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
+import ClickActionSupport from '../mixins/click-action-support';
 import layout from '../templates/components/mdl-button';
 
 const { computed } = Ember;
 
-export default BaseComponent.extend(RippleSupport, {
+export default BaseComponent.extend(RippleSupport, ClickActionSupport, {
   primaryClassName: 'button',
   tagName: 'button',
   icon: null,
@@ -33,9 +34,5 @@ export default BaseComponent.extend(RippleSupport, {
     this._super(...arguments);
     let mdlbtn = new window.MaterialButton(this.get('element'));
     this.set('_mdlComponent', mdlbtn);
-  },
-
-  click() {
-    this.sendAction('action', this);
   }
 });

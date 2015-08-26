@@ -5,11 +5,7 @@ moduleForComponent('mdl-button', 'Integration | Component | mdl button', {
   integration: true
 });
 
-test('it renders', function(assert) {
-  assert.expect(3);
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('it renders with the correct text', function(assert) {
 
   this.render(hbs`{{mdl-button}}`);
   assert.equal(this.$().text().trim(), '');
@@ -26,3 +22,22 @@ test('it renders', function(assert) {
 
   assert.equal(this.$().text().trim(), 'Hello');
 });
+
+test('fires action "action" on click by default', function(assert) {
+  assert.expect(1);
+  // Set any properties with this.set('myProperty', 'value');
+  // Handle any actions with this.on('myAction', function(val) { ... });
+
+  this.on('buttonClicked', val => {
+    assert.ok(val.element.className.indexOf('this-is-my-button') >= 0, 'Button component is passed as argument to action');
+  });
+
+  this.render(hbs`
+    {{#mdl-button action='buttonClicked' class='this-is-my-button'}}
+      Hello
+    {{/mdl-button}}
+  `);
+
+  this.$('.mdl-button').click();
+});
+
