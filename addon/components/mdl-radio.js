@@ -2,7 +2,7 @@ import Ember from 'ember';
 import BaseToggleComponent from './-base-toggle-component';
 import layout from '../templates/components/mdl-radio';
 
-const { computed, computed: { oneWay } } = Ember;
+const { computed: { oneWay } } = Ember;
 
 export default BaseToggleComponent.extend({
   primaryClassName: 'radio',
@@ -17,7 +17,5 @@ export default BaseToggleComponent.extend({
     this.set('_mdlComponent', mdlradio);
   },
 
-  _defaultName: computed('elementId', function() {
-    return `${this.get('elementId')}-name`;
-  })
+  _defaultName: 'default'
 });
