@@ -41,3 +41,28 @@ test('fires action "action" on click by default', function(assert) {
   this.$('.mdl-button').click();
 });
 
+test('does not fire action when disabled', function(assert) {
+  assert.expect(2);
+  // Set any properties with this.set('myProperty', 'value');
+  // Handle any actions with this.on('myAction', function(val) { ... });
+  let clickCount = 0;
+  this.on('buttonClicked', val => {
+    clickCount++;
+  });
+
+  this.set('buttonDisabled', false);
+
+  this.render(hbs`
+    {{#mdl-button action='buttonClicked' class='this-is-my-button' disabled=buttonDisabled}}
+      Hello
+    {{/mdl-button}}
+  `);
+
+  this.$('.mdl-button').click();
+  assert.equal(clickCount, 1, 'One click action fired');
+
+  this.set('buttonDisabled', true);
+  this.$('.mdl-button').click();
+
+  assert.equal(clickCount, 1, 'Still one click');
+});

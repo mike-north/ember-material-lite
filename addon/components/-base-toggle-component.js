@@ -1,11 +1,12 @@
 import Ember from 'ember';
 import BaseToplevelComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
+import ClickActionSupport from '../mixins/click-action-support';
 import layout from '../templates/components/mdl-checkbox';
 
 const { computed } = Ember;
 
-export default BaseToplevelComponent.extend(RippleSupport, {
+export default BaseToplevelComponent.extend(RippleSupport, ClickActionSupport, {
   tagName: 'label',
   layout,
   value: false,
