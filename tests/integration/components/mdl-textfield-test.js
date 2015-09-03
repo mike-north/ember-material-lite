@@ -41,3 +41,24 @@ test('html validations', function(assert) {
   assert.equal(this.$().text().trim(), 'Please use two upper case letters');
   assert.ok(this.$('.mdl-textfield__error').is(':visible'), 'Errors are visible');
 });
+
+test('custom errorMessage', function(assert) {
+  assert.expect(5);
+
+  this.render(
+    hbs`{{mdl-textfield errorMessage=message}}`
+  );
+
+  assert.equal(this.$('.mdl-textfield__error').length, 0, 'No errors are visible');
+
+  this.set('message', 'That input is not acceptable');
+
+  assert.equal(this.$().text().trim(), 'That input is not acceptable');
+  assert.ok(this.$('.mdl-textfield__error').is(':visible'), 'Errors are visible');
+
+  this.set('message', '');
+  assert.equal(this.$('.mdl-textfield__error').length, 0, 'No errors are visible');
+
+  this.set('message', []);
+  assert.equal(this.$('.mdl-textfield__error').length, 0, 'No errors are visible');
+});
