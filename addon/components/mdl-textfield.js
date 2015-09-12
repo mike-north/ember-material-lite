@@ -4,7 +4,8 @@ import layout from '../templates/components/mdl-textfield';
 
 const {
   isPresent,
-  observer
+  observer,
+  run
 } = Ember;
 
 export default BaseComponent.extend({
@@ -19,7 +20,14 @@ export default BaseComponent.extend({
   beforeMdlInit() {
     this.$('label.mdl-button').attr('for', this.get('_inputId'));
   },
-  setValidity: observer('errorMessage', function() {
+  _checkValidity: observer('errorMessage', function() {
+    run.scheduleOnce('afterRender', this, this._setValidity);
+  }),
+  _setValidity() {
+    if (this.isDestroyed) {
+      return;
+    }
+
     let mdlComponent = this.get('_mdlComponent');
     let errorMessage = this.get('errorMessage');
 
@@ -28,5 +36,5 @@ export default BaseComponent.extend({
     } else {
       mdlComponent.input_.setCustomValidity('');
     }
-  })
+  }
 });
