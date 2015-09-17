@@ -1,24 +1,10 @@
 import Ember from 'ember';
+import layout from '../templates/components/mdl-nav-item';
 
-const { LinkComponent } = Ember;
+const { Component } = Ember;
 
-let mdlNavItem = LinkComponent.extend({
+export default Component.extend({
 
-  classNames: ['mdl-navigation__link'],
-
-  params: null,
-
-  didReceiveAttrs() {
-    this.attrs.params = this.get('params');
-    this.attrs.hasBlock = false;
-  }
+  layout
 
 });
-
-mdlNavItem.reopenClass({
-
-  positionalParams: 'params'
-
-});
-
-export default mdlNavItem;
