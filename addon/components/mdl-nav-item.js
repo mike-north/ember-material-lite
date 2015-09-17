@@ -1,10 +1,24 @@
 import Ember from 'ember';
-import ChildComponentSupport from 'ember-composability/mixins/child-component-support';
-import ClickActionSupport from '../mixins/click-action-support';
-import MdlNav from './mdl-nav';
 
-export default Ember.Component.extend(ChildComponentSupport, ClickActionSupport, {
-  _parentComponentTypes: Ember.A([MdlNav]),
-  inDrawer: true,
-  inHeader: true
+const { LinkComponent } = Ember;
+
+let mdlNavItem = LinkComponent.extend({
+
+  classNames: ['mdl-navigation__link'],
+
+  params: null,
+
+  didReceiveAttrs() {
+    this.attrs.params = this.get('params');
+    this.attrs.hasBlock = false;
+  }
+
 });
+
+mdlNavItem.reopenClass({
+
+  positionalParams: 'params'
+
+});
+
+export default mdlNavItem;

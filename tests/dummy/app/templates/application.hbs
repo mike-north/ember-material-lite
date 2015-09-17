@@ -1,25 +1,41 @@
-{{#x-nav title='Ember Material Design Lite'
-  mobileTitle='Ember MDL'
-  includeHeaderItems=false
-  includeDrawerTitle=false
-  fixedHeader=true
-  fixedDrawer=true}}
-    {{mdl-nav-item name='Badges'    inHeader=false route='badges'}}
-    {{mdl-nav-item name='Buttons'   inHeader=false route='buttons'}}
-    {{mdl-nav-item name='Cards'     inHeader=false route='cards'}}
-    {{mdl-nav-item name='Footers'   inHeader=false route='footer'}}
-    {{mdl-nav-item name='Icons'     inHeader=false route='icons'}}
-    {{mdl-nav-item name='Inputs'    inHeader=false route='textfields'}}
-    {{mdl-nav-item name='Menus'     inHeader=false route='menus'}}
-    {{mdl-nav-item name='Nav'       inHeader=false route='navs'}}
-    {{mdl-nav-item name='Progress'  inHeader=false route='progress'}}
-    {{mdl-nav-item name='Sliders'   inHeader=false route='sliders'}}
-    {{mdl-nav-item name='Table'     inHeader=false route='table'}}
-    {{mdl-nav-item name='Tabs'      inHeader=false route='tabs'}}
-    {{mdl-nav-item name='Toggles'   inHeader=false route='toggles'}}
-    {{mdl-nav-item name='Tooltips'  inHeader=false route='tooltips'}}
-  <div class="mdl-grid">
+{{#mdl-nav fixedHeader=true fixedDrawer=true}}
+  {{#mdl-nav-header}}
+    <span class="mdl-layout-title">Ember Material Design Lite</span>
+    <div class="mdl-layout-spacer"></div>
+    {{#mdl-nav-menu class="mdl-layout--large-screen-only"}}
+      <a class='mdl-navigation__link github-link' href='https://github.com/truenorth/ember-material-lite' target='_blank'>
+        <i class="material-icons">code</i>
+        GitHub
+      </a>
+    {{/mdl-nav-menu}}
+  {{/mdl-nav-header}}
 
-    {{outlet}}
-  </div>
-{{/x-nav}}
+  {{#mdl-nav-drawer}}
+    {{#mdl-nav-menu}}
+      {{mdl-nav-item 'Badges' 'badges'}}
+      {{mdl-nav-item 'Buttons' 'buttons'}}
+      {{mdl-nav-item 'Cards' 'cards'}}
+      {{mdl-nav-item 'Footers' 'footer'}}
+      {{mdl-nav-item 'Icons' 'icons'}}
+      {{mdl-nav-item 'Inputs' 'textfields'}}
+      {{mdl-nav-item 'Menus' 'menus'}}
+      {{mdl-nav-item 'Nav' 'navs'}}
+      {{mdl-nav-item 'Progress' 'progress'}}
+      {{mdl-nav-item 'Sliders' 'sliders'}}
+      {{mdl-nav-item 'Table' 'table'}}
+      {{mdl-nav-item 'Tabs' 'tabs'}}
+      {{mdl-nav-item 'Toggles' 'toggles'}}
+      {{mdl-nav-item 'Tooltips' 'tooltips'}}
+      <a class='mdl-navigation__link github-link drawer' href='https://github.com/truenorth/ember-material-lite' target='_blank'>
+        {{ mdl-icon icon="code" }}
+        GitHub
+      </a>
+    {{/mdl-nav-menu}}
+  {{/mdl-nav-drawer}}
+
+  {{#mdl-nav-content}}
+    <div class="mdl-grid">
+      {{ outlet }}
+    </div>
+  {{/mdl-nav-content}}
+{{/mdl-nav}}
