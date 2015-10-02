@@ -26,10 +26,10 @@ export default BaseComponent.extend(ParentComponentSupport, {
   includeDrawerTitle: true,
   _mdlComponent: null,
   _drawerNavItems: computed('composableChildren.[]', 'composableChildren.@each.inDrawer', function() {
-    return Ember.A(this.get('composableChildren').filter(x => x.inDrawer));
+    return Ember.A(this.get('composableChildren').filter((x) => x.inDrawer));
   }),
   _headerNavItems: computed('composableChildren.[]', 'composableChildren.@each.inHeader', function() {
-    return Ember.A(this.get('composableChildren').filter(x => x.inHeader));
+    return Ember.A(this.get('composableChildren').filter((x) => x.inHeader));
   }),
 
   _headerClassString: computed('waterfallMenu', function() {

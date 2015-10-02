@@ -15,7 +15,7 @@ export default BaseComponent.extend(ParentComponentSupport, RippleSupport, {
     this._super(...arguments);
     let mdltabs = new window.MaterialTabs(this.get('element'));
     this.set('_mdlComponent', mdltabs);
-    let [activeTab] = this.get('composableChildren').filter(x => x.title === this.get('active'));
+    let [activeTab] = this.get('composableChildren').filter((x) => x.title === this.get('active'));
     if (activeTab) {
       activeTab.set('isActive', true);
     }
@@ -23,7 +23,7 @@ export default BaseComponent.extend(ParentComponentSupport, RippleSupport, {
 
   actions: {
     tabClicked(tab) {
-      let [activeTab] = this.get('composableChildren').filter(x => x.title === this.get('active'));
+      let [activeTab] = this.get('composableChildren').filter((x) => x.title === this.get('active'));
       if (activeTab) {
         activeTab.set('isActive', false);
       }

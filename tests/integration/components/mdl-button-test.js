@@ -28,7 +28,7 @@ test('fires action "action" on click by default', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.on('buttonClicked', val => {
+  this.on('buttonClicked', (val) => {
     assert.ok(val.element.className.indexOf('this-is-my-button') >= 0, 'Button component is passed as argument to action');
   });
 
@@ -46,7 +46,7 @@ test('does not fire action when disabled', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
   let clickCount = 0;
-  this.on('buttonClicked', val => {
+  this.on('buttonClicked', (val) => {
     clickCount++;
   });
 
