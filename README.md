@@ -52,6 +52,31 @@ $color-accent: $palette-pink-A200;
 @import "material-design-lite";
 ```
 
+### Images
+
+Several of the MDL components reference [image assets](https://github.com/google/material-design-lite/tree/0566f444a8fbe5e92abe5deaae939a88ca35a2d5/src/images). In order to include them in your project, edit `ember-cli-build.js` to include the following:
+
+```js
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
+
+module.exports = function(defaults) {
+  var app = new EmberApp(defaults, {
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    }    
+  });
+
+  var materialSVG = pickFiles('bower_components/material-design-lite/src/images', {
+    srcDir: '/',
+    files: ['**/*.svg'],
+    destDir: '/images'
+  });
+
+  return mergeTrees([app.toTree(), materialSVG]);
+};
+```
+
 ## Running Tests
 
 * `ember test`
