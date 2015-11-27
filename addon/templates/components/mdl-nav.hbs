@@ -6,7 +6,13 @@
     {{#if includeHeaderLinks}}
     <nav class="mdl-navigation mdl-layout--large-screen-only">
       {{#each _headerNavItems as |navItem|}}
-        {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
+        {{#if navItem.route}}
+          {{link-to navItem.name navItem.route class='mdl-navigation__link' bubbles=true}}
+        {{else}}
+          <span class="mdl-navigation__link">
+            {{navItem.name}}
+          </span>
+        {{/if}}
       {{/each}}
     </nav>
     {{/if}}
@@ -20,7 +26,13 @@
   {{/if}}
   <nav class="mdl-navigation">
     {{#each _drawerNavItems as |navItem|}}
-      {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
+      {{#if navItem.route}}
+        {{link-to navItem.name navItem.route class='mdl-navigation__link' bubbles=true}}
+      {{else}}
+        <span class="mdl-navigation__link">
+          {{navItem.name}}
+        </span>
+      {{/if}}
     {{/each}}
   </nav>
 </div>
