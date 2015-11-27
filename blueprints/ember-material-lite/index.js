@@ -14,6 +14,7 @@ module.exports = {
   afterInstall: function () {
     return RSVP.all([
       this.addPackageToProject('ember-cli-sass', '^3.3.0'),
+      this.addPackageToProject('ember-cli-autoprefixer', '~0.5.0'),
       this.addPackageToProject('ember-new-computed', '~1.0.0'),
       this.addPackageToProject('ember-legacy-views', '~0.2.0'),
       this.addPackageToProject('ember-truth-helpers', '~1.1.0'),
