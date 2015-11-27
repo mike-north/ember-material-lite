@@ -15,7 +15,7 @@ export default BaseComponent.extend(ChildComponentSupport, {
     if (isEmpty(childComponents)) {
       return true;
     } else {
-      const labels = parentComponent.getComposableChildren().map(x => x.label);
+      const labels = parentComponent.getComposableChildren().map((x) => x.label);
       return labels.indexOf(this.get('label')) < 0;
     }
   }
