@@ -46,7 +46,7 @@ test('does not fire action when disabled', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
   let clickCount = 0;
-  this.on('buttonClicked', (val) => {
+  this.on('buttonClicked', () => {
     clickCount++;
   });
 

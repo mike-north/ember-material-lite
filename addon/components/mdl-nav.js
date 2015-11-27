@@ -25,9 +25,12 @@ export default BaseComponent.extend(ParentComponentSupport, {
   includeDrawer: true,
   includeDrawerTitle: true,
   _mdlComponent: null,
+  closeDrawerOnItemClick: false,
+
   _drawerNavItems: computed('composableChildren.[]', 'composableChildren.@each.inDrawer', function() {
     return Ember.A(this.get('composableChildren').filter((x) => x.inDrawer));
   }),
+
   _headerNavItems: computed('composableChildren.[]', 'composableChildren.@each.inHeader', function() {
     return Ember.A(this.get('composableChildren').filter((x) => x.inHeader));
   }),
@@ -50,5 +53,22 @@ export default BaseComponent.extend(ParentComponentSupport, {
     this._super(...arguments);
     let mdlnav = new window.MaterialLayout(this.get('element'));
     this.set('_mdlComponent', mdlnav);
+
+    this.$('nav.mdl-navigation').on('click', (jqEvt) => {
+      if (this.get('closeDrawerOnItemClick') && jqEvt.target.className.indexOf('mdl-navigation__link') >= 0 && this.$(jqEvt.target).closest('nav.mdl-navigation').closest('.mdl-layout__drawer').hasClass('is-visible')) {
+        console.log('closing');
+        Ember.run.next(() => {
+          const _mdlComponent = this.get('_mdlComponent');
+          _mdlComponent.drawer_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);
+          _mdlComponent.obfuscator_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);
+          // this.get('_mdlComponent').drawerToggleHandler_();
+        });
+      }
+    });
+  },
+
+  willDestroyElement() {
+    this._super(...arguments);
+    this.$('nav.mdl-navigation').off('click');
   }
 });
