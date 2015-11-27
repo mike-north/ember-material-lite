@@ -55,7 +55,7 @@ export default BaseComponent.extend(ParentComponentSupport, {
     this.set('_mdlComponent', mdlnav);
 
     this.$('nav.mdl-navigation').on('click', (jqEvt) => {
-      if (this.get('closeDrawerOnItemClick') && jqEvt.target.className.indexOf('mdl-navigation__link') >= 0 && $(jqEvt.target).closest('nav.mdl-navigation').closest('.mdl-layout__drawer').hasClass('is-visible')) {
+      if (this.get('closeDrawerOnItemClick') && jqEvt.target.className.indexOf('mdl-navigation__link') >= 0 && this.$(jqEvt.target).closest('nav.mdl-navigation').closest('.mdl-layout__drawer').hasClass('is-visible')) {
         console.log('closing');
         Ember.run.next(() => {
           const _mdlComponent = this.get('_mdlComponent');

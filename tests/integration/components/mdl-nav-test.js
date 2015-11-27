@@ -20,7 +20,6 @@ test('it renders', function(assert) {
   assert.equal(this.$().text().trim().replace(/\s+/g, ''), 'NavTitleNavTitlemenutemplateblocktext');
 });
 
-
 test('with closeDrawerOnItemClick=false', function(assert) {
 
   // Set any properties with this.set('myProperty', 'value');
