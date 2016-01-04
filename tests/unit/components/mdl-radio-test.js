@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import { componentDisabledTest } from './-general-helpers';
 
@@ -26,7 +25,7 @@ test('checked property is set', function(assert) {
   assert.expect(1);
 
   // Creates the component instance
-  const component = this.subject({ checked: true });
+  this.subject({ checked: true });
 
   // Renders the component to the page
   this.render();
