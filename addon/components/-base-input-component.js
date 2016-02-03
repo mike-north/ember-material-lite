@@ -8,6 +8,8 @@ const {
   run
 } = Ember;
 
+var _value = "";
+
 export default BaseComponent.extend({
   primaryClassName: 'textfield',
   type: 'text',
@@ -21,6 +23,18 @@ export default BaseComponent.extend({
   //   declare no dependent property keys
   _inputId: computed(function() {
     return `${this.get('elementId')}-input`;
+  }),
+  value: Ember.computed({
+    // getter
+    get() {
+      return _value;
+    },
+    // setter
+    set(key, value) {
+      _value = value;
+      if (this.get('_mdlComponent')) { this.get('_mdlComponent').change(value); }
+      return _value;
+    }
   }),
   beforeMdlInit() {},
   didInsertElement() {
