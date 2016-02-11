@@ -29,6 +29,14 @@ export default BaseComponent.extend({
     let mdlTextfield = new window.MaterialTextfield(this.get('element'));
     this.set('_mdlComponent', mdlTextfield);
   },
+
+	didUpdate() {
+		Ember.run.scheduleOnce('afterRender', this, () => {
+			this.get('_mdlComponent').updateClasses_();
+		});
+		return this._super(...arguments);
+	},
+
   _checkValidity: observer('errorMessage', function() {
     run.scheduleOnce('afterRender', this, this._setValidity);
   }),
