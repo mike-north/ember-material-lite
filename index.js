@@ -7,8 +7,8 @@ module.exports = {
   included: function(app) {
     this._super.included.apply(this, arguments);
 
-    app.vendorFiles['componentHandlerShim.js'] = 'vendor/componentHandlerShim.js';
-    app.legacyFilesToAppend.push('vendor/componentHandlerShim.js');
+    // app.vendorFiles['componentHandlerShim.js'] = 'vendor/componentHandlerShim.js';
+    app.import('vendor/componentHandlerShim.js');
     app.import(app.bowerDirectory + '/material-design-lite/src/button/button.js');
     app.import(app.bowerDirectory + '/material-design-lite/src/checkbox/checkbox.js');
     app.import(app.bowerDirectory + '/material-design-lite/src/data-table/data-table.js');

@@ -1,9 +1,10 @@
-(function () {
+/*jshint node:true*/
+(function() {
   'use strict';
   window._materialLiteRegistrations = [];
   window.componentHandler = {
-    register: function (config) {
+    register: function(config) {
       window._materialLiteRegistrations.push(config);
     }
-  }
+  };
 })();

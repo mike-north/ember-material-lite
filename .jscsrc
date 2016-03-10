@@ -1,3 +1,5 @@
 {
-	"excludeFiles": ["blanket-options.js"]
+  "preset": "ember-suave",
+  "disallowConstOutsideModuleScope": null,
+  "excludeFiles": ["blanket-options.js"]
 }

@@ -1,5 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
-import { componentDisabledTest } from './-general-helpers';
+// import { componentDisabledTest } from './-general-helpers';
 
 moduleForComponent('mdl-textfield', 'Unit | Component | mdl textfield', {
   // Specify the other units that are required for this test
@@ -19,4 +19,4 @@ test('it renders', function(assert) {
   assert.equal(component._state, 'inDOM');
 });
 
-test('Component disables properly', componentDisabledTest('input'), { text: 'Hello' });
+// test('Component disables properly', componentDisabledTest('input'), { text: 'Hello' });
