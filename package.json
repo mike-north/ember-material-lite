@@ -1,6 +1,6 @@
 {
   "name": "ember-material-lite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Material Design Lite for Ember.js Apps",
   "directories": {
     "doc": "doc",
