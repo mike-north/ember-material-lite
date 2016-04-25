@@ -22,6 +22,7 @@ module.exports = {
     scenario('2.1'),
     scenario('2.2'),
     scenario('2.3'),
+    scenario('2.4'),
     {
       name: 'ember-release',
       bower: {
