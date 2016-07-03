@@ -1,5 +1,13 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
-  rows: Ember.A([{ id: 0, name: 'Hello' }, { id: 1, name: 'World' }])
+const { Controller, A } = Ember;
+
+export default Controller.extend({
+  rows: A([{
+    id: 0,
+    name: 'Hello'
+  }, {
+    id: 1,
+    name: 'World'
+  }])
 });

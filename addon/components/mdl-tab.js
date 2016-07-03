@@ -3,9 +3,9 @@ import MdlTabs from './mdl-tabs';
 import ChildComponentSupport from 'ember-composability/mixins/child-component-support';
 import layout from '../templates/components/mdl-tab';
 
-const { computed, String: { dasherize }, A } = Ember;
+const { Component, computed, String: { dasherize }, A } = Ember;
 
-export default Ember.Component.extend(ChildComponentSupport, {
+export default Component.extend(ChildComponentSupport, {
   layout,
   _parentComponentTypes: new A([MdlTabs]),
   classNames: ['mdl-tabs__panel'],

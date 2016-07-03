@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
-const { computed, observer } = Ember;
+const { Mixin, computed, observer } = Ember;
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   hasRipples: true,
   _rippleClass: computed('_primaryClassNameString', function() {
     return `${this.get('_primaryClassNameString')}__ripple-container`;

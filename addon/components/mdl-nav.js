@@ -3,7 +3,16 @@ import ParentComponentSupport from 'ember-composability/mixins/parent-component-
 import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-nav';
 
-let { computed, computed: { oneWay } } = Ember;
+let {
+  A,
+  computed,
+  computed: {
+    oneWay
+  },
+  run: {
+    next
+  }
+} = Ember;
 
 export default BaseComponent.extend(ParentComponentSupport, {
   primaryClassName: 'layout',
@@ -28,11 +37,11 @@ export default BaseComponent.extend(ParentComponentSupport, {
   closeDrawerOnItemClick: false,
 
   _drawerNavItems: computed('composableChildren.[]', 'composableChildren.@each.inDrawer', function() {
-    return Ember.A(this.get('composableChildren').filter((x) => x.inDrawer));
+    return A(this.get('composableChildren').filter((x) => x.inDrawer));
   }),
 
   _headerNavItems: computed('composableChildren.[]', 'composableChildren.@each.inHeader', function() {
-    return Ember.A(this.get('composableChildren').filter((x) => x.inHeader));
+    return A(this.get('composableChildren').filter((x) => x.inHeader));
   }),
 
   _headerClassString: computed('waterfallMenu', function() {
@@ -57,7 +66,7 @@ export default BaseComponent.extend(ParentComponentSupport, {
     this.$('nav.mdl-navigation').on('click', (jqEvt) => {
       if (this.get('closeDrawerOnItemClick') && jqEvt.target.className.indexOf('mdl-navigation__link') >= 0 && this.$(jqEvt.target).closest('nav.mdl-navigation').closest('.mdl-layout__drawer').hasClass('is-visible')) {
         console.log('closing');
-        Ember.run.next(() => {
+        next(() => {
           const _mdlComponent = this.get('_mdlComponent');
           _mdlComponent.drawer_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);
           _mdlComponent.obfuscator_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);

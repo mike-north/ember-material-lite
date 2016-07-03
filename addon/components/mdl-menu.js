@@ -3,7 +3,9 @@ import ParentComponentSupport from 'ember-composability/mixins/parent-component-
 import layout from '../templates/components/mdl-menu';
 import computed from 'ember-new-computed';
 
-export default Ember.Component.extend(ParentComponentSupport, {
+const { Component } = Ember;
+
+export default Component.extend(ParentComponentSupport, {
   layout,
   _primaryClassNameString: 'mdl-menu',
   icon: 'more_vert',

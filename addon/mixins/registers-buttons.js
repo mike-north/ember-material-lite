@@ -1,14 +1,14 @@
 import Ember from 'ember';
 
-const { computed: { empty } } = Ember;
+const { A, Mixin, computed: { empty } } = Ember;
 
-export default Ember.Mixin.create({
+export default Mixin.create({
   _registersButtons: true,
   _buttons: null,
   _noButtons: empty('_buttons'),
   init() {
     this._super(...arguments);
-    this.set('_buttons', Ember.A([]));
+    this.set('_buttons', A([]));
   },
 
   registerButton(button) {

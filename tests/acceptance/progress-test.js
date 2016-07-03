@@ -2,13 +2,15 @@ import Ember from 'ember';
 import { module, test } from 'qunit';
 import startApp from '../../tests/helpers/start-app';
 
+const { run } = Ember;
+
 module('Acceptance | progress', {
   beforeEach() {
     this.application = startApp();
   },
 
   afterEach() {
-    Ember.run(this.application, 'destroy');
+    run(this.application, 'destroy');
   }
 });
 
