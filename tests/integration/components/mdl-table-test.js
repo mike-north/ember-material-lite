@@ -2,7 +2,7 @@ import Ember from 'ember';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 
-const { A } = Ember;
+const { A, run: { next } } = Ember;
 
 moduleForComponent('mdl-table', 'Integration | Component | mdl table', {
   integration: true
@@ -32,7 +32,7 @@ test('it renders', function(assert) {
     {{/mdl-table}}
   `);
 
-  Ember.run.next(() => {
+  next(() => {
     assert.equal(this.$('thead tr:first-child th').length, 2, 'Two columns in header');
     assert.equal(this.$('thead tr:first-child th').text(), 'IdName', 'Correct header labels');
     assert.equal(this.$('tbody tr:first-child td').length, 2, 'Two columns in body');

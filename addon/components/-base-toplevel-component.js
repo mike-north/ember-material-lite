@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
-const { computed } = Ember;
+const { computed, Component } = Ember;
 
-export default Ember.Component.extend({
+export default Component.extend({
   primaryClassName: null,
   _jsClass: true,
   classNameBindings: ['_primaryClassNameString', '_jsClassNameString'],

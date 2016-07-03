@@ -1,11 +1,13 @@
 import Ember from 'ember';
 import config from './config/environment';
 
-let Router = Ember.Router.extend({
+const { Router } = Ember;
+
+let router = Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
+router.map(function() {
   this.route('badges');
   this.route('buttons');
   this.route('cards');
@@ -22,4 +24,4 @@ Router.map(function() {
   this.route('tooltips');
 });
 
-export default Router;
+export default router;

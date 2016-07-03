@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Mixin.create({
+const { Mixin } = Ember;
+
+export default Mixin.create({
   click() {
     this.sendAction('action', this);
     this.sendAction('on-click', this);
