@@ -1,7 +1,11 @@
 <thead>
 	<tr>
 	{{#each composableChildren as |child|}}
-		<th>{{child.label}}</th>
+		{{#if child.isNonNumeric}}
+			<th class="mdl-data-table__cell--non-numeric">{{child.label}}</th>
+		{{else}}
+			<th>{{child.label}}</th>
+		{{/if}}
 	{{/each}}		
 	</tr>
 </thead>
