@@ -3,7 +3,7 @@ import ParentComponentSupport from 'ember-composability/mixins/parent-component-
 import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-nav';
 
-let {
+const {
   A,
   computed,
   computed: {
@@ -67,7 +67,7 @@ export default BaseComponent.extend(ParentComponentSupport, {
       if (this.get('closeDrawerOnItemClick') && jqEvt.target.className.indexOf('mdl-navigation__link') >= 0 && this.$(jqEvt.target).closest('nav.mdl-navigation').closest('.mdl-layout__drawer').hasClass('is-visible')) {
         console.log('closing');
         next(() => {
-          const _mdlComponent = this.get('_mdlComponent');
+          let _mdlComponent = this.get('_mdlComponent');
           _mdlComponent.drawer_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);
           _mdlComponent.obfuscator_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);
           // this.get('_mdlComponent').drawerToggleHandler_();

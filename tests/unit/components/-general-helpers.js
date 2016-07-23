@@ -3,7 +3,7 @@ import Ember from 'ember';
 const { run } = Ember;
 
 export function componentIsDisabled(assert, ctxt, selector) {
-  const component = ctxt.subject();
+  let component = ctxt.subject();
   assert.equal(component._state, 'preRender');
   // Renders the component to the page
   ctxt.render();
