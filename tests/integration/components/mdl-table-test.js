@@ -26,7 +26,7 @@ test('it renders', function(assert) {
       {{#mdl-table-col label='Id'}}
         {{row.id}}
       {{/mdl-table-col}}
-      {{#mdl-table-col label='Name'}}
+      {{#mdl-table-col label='Name' isNonNumeric=true}}
         {{row.name}}
       {{/mdl-table-col}}
     {{/mdl-table}}
