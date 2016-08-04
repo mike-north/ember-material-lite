@@ -26,7 +26,7 @@ test('with closeDrawerOnItemClick=false', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
   // Template block usage:" + EOL +
-  const done = assert.async();
+  let done = assert.async();
 
   this.render(hbs`
     {{#mdl-nav title='Close on click'
@@ -62,7 +62,7 @@ test('with closeDrawerOnItemClick=true', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
 
   // Template block usage:" + EOL +
-  const done = assert.async();
+  let done = assert.async();
 
   this.render(hbs`
     {{#mdl-nav title='Close on click'

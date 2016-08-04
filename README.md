@@ -52,6 +52,74 @@ $color-accent: $palette-pink-A200;
 @import "material-design-lite";
 ```
 
+## Load Material design icons fontfiles locally
+Adding `http://fonts.googleapis.com/icon?family=Material+Icons` into the `index.html` just works.
+But in few scenarios(like running app offline) you would want to include these icon fonts from the project directories itself. 
+To achieve the same, first edit `ember-cli-build.js` to include the following
+
+```js
+var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
+
+module.exports = function(defaults) {
+  var app = new EmberApp(defaults, {
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    }    
+  });
+
+  var googleFontFiles = pickFiles('bower_components/material-design-icons/iconfont', {
+    srcDir: '/',
+    files: ['**/*.woff', '**/*.woff2', '**/*.eot', '**/*.ttf'],
+    destDir: '/fonts'
+  });
+
+  return mergeTrees([app.toTree(), googleFontFiles]);
+};
+```
+
+Also Add below code on top of `app/styles/app.scss` file to import icon font files.
+```css
+/*Material Icons css*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+       url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+```
+
+## Images
+
+Several of the MDL components reference [image assets](https://github.com/google/material-design-lite/tree/0566f444a8fbe5e92abe5deaae939a88ca35a2d5/src/images). In order to include them in your project, edit `ember-cli-build.js` to include the following:
+
+```js
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
+
+module.exports = function(defaults) {
+  var app = new EmberApp(defaults, {
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    }    
+  });
+
+  var materialSVG = pickFiles('bower_components/material-design-lite/src/images', {
+    srcDir: '/',
+    files: ['**/*.svg'],
+    destDir: '/images'
+  });
+
+  return mergeTrees([app.toTree(), materialSVG]);
+};
+```
+
 ## Running Tests
 
 * `ember test`

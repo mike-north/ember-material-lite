@@ -68,7 +68,7 @@ test('selection state test (two groups)', function(assert) {
 test('action "action" test', function(assert) {
   assert.expect(3);
 
-  const counts = {
+  let counts = {
     tom: 0,
     yehuda: 0,
     stef: 0
@@ -98,7 +98,7 @@ test('action "action" test', function(assert) {
 test('action "change" test', function(assert) {
   assert.expect(3);
 
-  const counts = {
+  let counts = {
     tom: 0,
     yehuda: 0,
     stef: 0
