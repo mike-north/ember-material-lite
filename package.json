@@ -53,7 +53,7 @@
     "chalk": "^1.1.0",
     "ember-cli-babel": "^5.1.6",
     "ember-cli-htmlbars": "^1.0.5",
-    "rsvp": "^3.0.0"
+    "rsvp": "^3.3.2"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
