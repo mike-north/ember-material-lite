@@ -14,7 +14,7 @@
   "repository": "https://github.com/mike-north/ember-material-lite.git",
   "homepage": "https://github.com/mike-north/ember-material-lite",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4"
   },
   "author": "Mike North <michael.l.north@gmail.com> (http://mike.works)",
   "license": "MIT",
