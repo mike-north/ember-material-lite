@@ -28,6 +28,7 @@ export default BaseComponent.extend({
     this.beforeMdlInit();
     let mdlTextfield = new window.MaterialTextfield(this.get('element'));
     this.set('_mdlComponent', mdlTextfield);
+    this._setValidity();
   },
   _checkValidity: observer('errorMessage', function() {
     run.scheduleOnce('afterRender', this, this._setValidity);
@@ -45,5 +46,8 @@ export default BaseComponent.extend({
     } else {
       mdlComponent.input_.setCustomValidity('');
     }
+
+    mdlComponent.updateClasses_();
+    mdlComponent.checkDirty();
   }
 });
