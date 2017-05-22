@@ -1,7 +1,6 @@
 import Ember from 'ember';
-import computed from 'ember-new-computed';
 
-const { Component, computed: { empty } } = Ember;
+const { Component, computed: { empty }, computed } = Ember;
 
 export default Component.extend({
   classNames: ['x-example', 'mdl-cell'],

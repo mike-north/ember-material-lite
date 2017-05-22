@@ -1,21 +1,16 @@
 ---
 language: node_js
 node_js:
-  - "0.12"
+  - "6"
 
 sudo: false
 
 cache:
-  directories:
-    - node_modules
+  yarn: true
 
 env:
-  - EMBER_TRY_SCENARIO=ember-1.13
-  - EMBER_TRY_SCENARIO=ember-2.0
-  - EMBER_TRY_SCENARIO=ember-2.1
-  - EMBER_TRY_SCENARIO=ember-2.2
-  - EMBER_TRY_SCENARIO=ember-2.3
-  - EMBER_TRY_SCENARIO=ember-2.4
+  - EMBER_TRY_SCENARIO=ember-lts-2.4
+  - EMBER_TRY_SCENARIO=ember-lts-2.8
   - EMBER_TRY_SCENARIO=ember-release
   - ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-beta
   - ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-canary
@@ -27,22 +22,17 @@ matrix:
     - env: ALLOW_DEPRECATIONS=true EMBER_TRY_SCENARIO=ember-canary
 
 before_install:
-  - mkdir travis-phantomjs
-  - wget https://s3.amazonaws.com/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-    -O $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2
-  - tar -xvf $PWD/travis-phantomjs/phantomjs-2.0.0-ubuntu-12.04.tar.bz2 -C $PWD/travis-phantomjs
-  - export PATH=$PWD/travis-phantomjs:$PATH
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH=$HOME/.yarn/bin:$PATH
+  - yarn global add phantomjs-prebuilt
+  - phantomjs --version
 
 
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
+  - yarn install --no-lockfile
 
 script:
-  - ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
 
 after_script:
   - sed -i -- 's/SF:ember-material-lite\/\(.*\)/SF:addon\/\1.js/' lcov.dat

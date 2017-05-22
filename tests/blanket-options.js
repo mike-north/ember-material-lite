@@ -1,6 +1,7 @@
-/* globals blanket, module */
+/* eslint-env node */
+/* globals blanket */
 
-var options = {
+let options = {
   modulePrefix: 'ember-material-lite',
   filter: '//.*ember-material-lite/.*/',
   antifilter: '//.*(tests|template).*/',
