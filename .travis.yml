@@ -25,18 +25,18 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH=$HOME/.yarn/bin:$PATH
   - yarn global add phantomjs-prebuilt
+  - yarn global add greenkeeper-lockfile@1
   - phantomjs --version
 
+before_script: greenkeeper-lockfile-update
+
+after_script: greenkeeper-lockfile-upload
 
 install:
   - yarn install --no-lockfile
 
 script:
   - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO test --skip-cleanup
-
-after_script:
-  - sed -i -- 's/SF:ember-material-lite\/\(.*\)/SF:addon\/\1.js/' lcov.dat
-  - cat lcov.dat | coveralls
 
 after_success:
 # Remove the downloaded copy of phantomJS
