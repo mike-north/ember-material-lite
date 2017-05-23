@@ -1,7 +1,6 @@
 {
   "name": "ember-material-lite",
   "dependencies": {
-    "material-design-lite": "1.0.6",
-    "blanket": "5e94fc30f2e694bb5c3718ddcbf60d467f4b4d26"
+    "material-design-lite": "1.0.6"
   }
 }
