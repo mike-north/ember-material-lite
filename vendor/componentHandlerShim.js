@@ -1,4 +1,4 @@
-/*jshint node:true*/
+/* eslint-env node */
 (function() {
   'use strict';
   window._materialLiteRegistrations = [];

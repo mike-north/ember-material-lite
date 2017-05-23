@@ -1,5 +1,7 @@
 # ember-material-lite
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike-north/ember-material-lite.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/mike-north/ember-material-lite.svg?branch=master)](https://travis-ci.org/mike-north/ember-material-lite)
 [![Dependency Status](https://david-dm.org/mike-north/ember-material-lite.svg)](https://david-dm.org/mike-north/ember-material-lite)
 [![devDependency Status](https://david-dm.org/mike-north/ember-material-lite/dev-status.svg)](https://david-dm.org/mike-north/ember-material-lite#info=devDependencies)

@@ -65,7 +65,6 @@ export default BaseComponent.extend(ParentComponentSupport, {
 
     this.$('nav.mdl-navigation').on('click', (jqEvt) => {
       if (this.get('closeDrawerOnItemClick') && jqEvt.target.className.indexOf('mdl-navigation__link') >= 0 && this.$(jqEvt.target).closest('nav.mdl-navigation').closest('.mdl-layout__drawer').hasClass('is-visible')) {
-        console.log('closing');
         next(() => {
           let _mdlComponent = this.get('_mdlComponent');
           _mdlComponent.drawer_.classList.remove(_mdlComponent.CssClasses_.IS_DRAWER_OPEN);

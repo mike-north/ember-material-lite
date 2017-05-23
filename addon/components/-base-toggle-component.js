@@ -3,7 +3,6 @@ import BaseToplevelComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import ClickActionSupport from '../mixins/click-action-support';
 import layout from '../templates/components/mdl-checkbox';
-import _computed from 'ember-new-computed';
 
 const { deprecate, computed } = Ember;
 
@@ -11,13 +10,13 @@ export default BaseToplevelComponent.extend(RippleSupport, ClickActionSupport, {
   tagName: 'label',
   layout,
   value: false,
-  label: _computed('text', {
+  label: computed('text', {
     get() {
-      deprecate(`The 'label' property has been deprecated. Please use 'text' instead`, false);
+      deprecate('The \'label\' property has been deprecated. Please use \'text\' instead', false);
       return this.get('text');
     },
     set(key, val) {
-      deprecate(`The 'label' property has been deprecated. Please use 'text' instead`, false);
+      deprecate('The \'label\' property has been deprecated. Please use \'text\' instead', false);
       this.set('text');
       return val;
     }

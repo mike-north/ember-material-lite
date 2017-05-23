@@ -1,9 +1,8 @@
 import Ember from 'ember';
 import ParentComponentSupport from 'ember-composability/mixins/parent-component-support';
 import layout from '../templates/components/mdl-menu';
-import computed from 'ember-new-computed';
 
-const { Component } = Ember;
+const { Component, computed } = Ember;
 
 export default Component.extend(ParentComponentSupport, {
   layout,

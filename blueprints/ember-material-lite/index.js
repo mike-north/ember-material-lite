@@ -1,17 +1,17 @@
-var RSVP  = require('rsvp');
-var chalk = require('chalk');
+/* eslint-env node */
+let RSVP  = require('rsvp');
 
 module.exports = {
   description: 'install ember-material-lite into a typical project',
-  normalizeEntityName: function() {}, // no-op since we're just adding dependencies
+  normalizeEntityName() {}, // no-op since we're just adding dependencies
 
-  beforeInstall: function (options) {
+  beforeInstall(/* options */) {
     return RSVP.all([
       this.addBowerPackageToProject('material-design-lite', '~1.0.4')
     ]);
   },
 
-  afterInstall: function () {
+  afterInstall() {
     return RSVP.all([
       this.addPackageToProject('ember-cli-sass', '^5.3.1'),
       this.addPackageToProject('ember-cli-autoprefixer', '~0.6.0'),

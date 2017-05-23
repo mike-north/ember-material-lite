@@ -1,4 +1,4 @@
-import { moduleForComponent/*, test*/ } from 'ember-qunit';
+import { moduleForComponent/* , test*/ } from 'ember-qunit';
 // import { componentRippleTest } from './-ripple-helpers';
 // import { componentDisabledTest } from './-general-helpers';
 moduleForComponent('mdl-button', 'Unit | Component | mdl button', {
