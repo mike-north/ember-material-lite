@@ -32,7 +32,7 @@ This addon can be used without SASS (relying on pure CSS for styles). If you cho
 1. Delete the `ember-cli-sass` NPM dependency that the installation blueprint will add to your app.
 2. Add the following line to your `ember-cli-build.js`.
 ```js
-app.import(app.bowerDirectory + '/material-design-lite/material.css');
+app.import('node_modules/material-design-lite/material.css');
 ```
 
 ## Configuration
@@ -67,11 +67,11 @@ var pickFiles = require('broccoli-static-compiler');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
+      includePaths: ['node_modules/material-design-lite/src']
     }    
   });
 
-  var googleFontFiles = pickFiles('bower_components/material-design-icons/iconfont', {
+  var googleFontFiles = pickFiles('node_modules/material-design-icons/iconfont', {
     srcDir: '/',
     files: ['**/*.woff', '**/*.woff2', '**/*.eot', '**/*.ttf'],
     destDir: '/fonts'
@@ -108,11 +108,11 @@ var pickFiles = require('broccoli-static-compiler');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
+      includePaths: ['node_modules/material-design-lite/src']
     }    
   });
 
-  var materialSVG = pickFiles('bower_components/material-design-lite/src/images', {
+  var materialSVG = pickFiles('node_modules/material-design-lite/src/images', {
     srcDir: '/',
     files: ['**/*.svg'],
     destDir: '/images'

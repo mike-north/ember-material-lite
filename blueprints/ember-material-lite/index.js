@@ -5,12 +5,6 @@ module.exports = {
   description: 'install ember-material-lite into a typical project',
   normalizeEntityName() {}, // no-op since we're just adding dependencies
 
-  beforeInstall(/* options */) {
-    return RSVP.all([
-      this.addBowerPackageToProject('material-design-lite', '~1.0.4')
-    ]);
-  },
-
   afterInstall() {
     return RSVP.all([
       this.addPackageToProject('ember-cli-sass', '^5.3.1'),
