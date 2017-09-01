@@ -29,6 +29,16 @@ test('value bindings', function(assert) {
   assert.equal(this.get('value'), 'bye');
 });
 
+test('textarea attributes', function(assert) {
+  assert.expect(3);
+
+  this.render(hbs`{{mdl-textarea autofocus=true required=true cols="30" rows="5"}}`);
+
+  assert.ok(this.$('textarea').attr('autofocus'));
+  assert.ok(this.$('textarea').attr('required'));
+  assert.equal(this.$('textarea').attr('rows'), 5);
+});
+
 test('html validations', function(assert) {
   assert.expect(2);
 
