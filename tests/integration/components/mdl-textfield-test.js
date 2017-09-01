@@ -29,6 +29,15 @@ test('value bindings', function(assert) {
   assert.equal(this.get('value'), 'bye');
 });
 
+test('input attributes', function(assert) {
+  assert.expect(2);
+
+  this.render(hbs`{{mdl-textfield autofocus=true required=true}}`);
+
+  assert.ok(this.$('input').attr('autofocus'));
+  assert.ok(this.$('input').attr('required'));
+});
+
 test('html validations', function(assert) {
   assert.expect(2);
 
