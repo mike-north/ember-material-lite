@@ -6,10 +6,13 @@ import MdlTable from './mdl-table';
 import layout from '../templates/components/mdl-table-col';
 
 export default BaseComponent.extend(ChildComponentSupport, {
-  _parentComponentTypes: new A([MdlTable]),
   tagName: 'td',
   layout,
-  clssNameBindings: ['isNonNumeric:mdl-data-table__cell--non-numeric'],
+  classNameBindings: ['isNonNumeric:mdl-data-table__cell--non-numeric'],
+  init() {
+    this._super(...arguments);
+    this.set('_parentComponentTypes', new A([MdlTable]))
+  },
   shouldRegisterToParent(parentComponent) {
     let childComponents = parentComponent.getComposableChildren();
     if (isEmpty(childComponents)) {

@@ -1,3 +1,4 @@
+/* eslint-disable ember/use-brace-expansion */
 import { A } from '@ember/array';
 import { computed } from '@ember/object';
 import { oneWay } from '@ember/object/computed';

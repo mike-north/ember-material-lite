@@ -8,10 +8,13 @@ import layout from '../templates/components/mdl-tab';
 
 export default Component.extend(ChildComponentSupport, {
   layout,
-  _parentComponentTypes: new A([MdlTabs]),
   classNames: ['mdl-tabs__panel'],
   classNameBindings: ['isActive:is-active'],
   isActive: false,
+  init() {
+    this._super(...arguments);
+    this.set('_parentComponentTypes', new A([MdlTabs]));
+  },
   dasherizedTitle: computed('title', function() {
     return dasherize(this.get('title'));
   })

@@ -11,6 +11,7 @@ export default BaseChildComponent.extend(ChildComponentSupport, {
   _childComponentClassStringDelimeter: '__',
   childComponentClassName: 'item',
   click() {
+    // eslint-disable-next-line
     this.sendAction('action', this);
   }
 });
