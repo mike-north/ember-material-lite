@@ -1,6 +1,6 @@
-import Ember from 'ember';
-
-const { Component, computed: { empty }, computed } = Ember;
+import Component from '@ember/component';
+import { empty } from '@ember/object/computed';
+import { computed } from '@ember/object';
 
 export default Component.extend({
   classNames: ['x-example', 'mdl-cell'],

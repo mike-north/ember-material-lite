@@ -1,8 +1,6 @@
-import Ember from 'ember';
+import { oneWay } from '@ember/object/computed';
 import BaseToggleComponent from './-base-toggle-component';
 import layout from '../templates/components/mdl-radio';
-
-const { computed: { oneWay } } = Ember;
 
 export default BaseToggleComponent.extend({
   primaryClassName: 'radio',

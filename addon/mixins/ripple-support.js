@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-const { Mixin, computed, observer } = Ember;
+import Mixin from '@ember/object/mixin';
+import { observer, computed } from '@ember/object';
 
 export default Mixin.create({
   hasRipples: true,

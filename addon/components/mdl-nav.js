@@ -1,18 +1,10 @@
-import Ember from 'ember';
+import { A } from '@ember/array';
+import { computed } from '@ember/object';
+import { oneWay } from '@ember/object/computed';
+import { next } from '@ember/runloop';
 import ParentComponentSupport from 'ember-composability/mixins/parent-component-support';
 import BaseComponent from './-base-toplevel-component';
 import layout from '../templates/components/mdl-nav';
-
-const {
-  A,
-  computed,
-  computed: {
-    oneWay
-  },
-  run: {
-    next
-  }
-} = Ember;
 
 export default BaseComponent.extend(ParentComponentSupport, {
   primaryClassName: 'layout',

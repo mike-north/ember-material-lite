@@ -1,10 +1,8 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import ClickActionSupport from '../mixins/click-action-support';
 import layout from '../templates/components/mdl-button';
-
-const { computed } = Ember;
 
 export default BaseComponent.extend(RippleSupport, ClickActionSupport, {
   primaryClassName: 'button',

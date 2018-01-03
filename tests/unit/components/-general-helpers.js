@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const { run } = Ember;
+import { run } from '@ember/runloop';
 
 export function componentIsDisabled(assert, ctxt, selector) {
   let component = ctxt.subject();

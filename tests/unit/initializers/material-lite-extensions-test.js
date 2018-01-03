@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import { run } from '@ember/runloop';
+import Application from '@ember/application';
 import { initialize } from '../../../initializers/material-lite-extensions';
 import { module, test } from 'qunit';
-
-const { run, Application } = Ember;
 
 let container, application;
 

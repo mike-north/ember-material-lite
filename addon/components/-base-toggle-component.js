@@ -1,10 +1,9 @@
-import Ember from 'ember';
+import { deprecate } from '@ember/application/deprecations';
+import { computed } from '@ember/object';
 import BaseToplevelComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import ClickActionSupport from '../mixins/click-action-support';
 import layout from '../templates/components/mdl-checkbox';
-
-const { deprecate, computed } = Ember;
 
 export default BaseToplevelComponent.extend(RippleSupport, ClickActionSupport, {
   tagName: 'label',
