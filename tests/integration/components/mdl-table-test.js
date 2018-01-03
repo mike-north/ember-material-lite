@@ -1,8 +1,7 @@
-import Ember from 'ember';
+import { A } from '@ember/array';
+import { next } from '@ember/runloop';
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
-
-const { A, run: { next } } = Ember;
 
 moduleForComponent('mdl-table', 'Integration | Component | mdl table', {
   integration: true

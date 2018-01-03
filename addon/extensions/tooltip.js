@@ -5,7 +5,7 @@ window.MaterialTooltip.prototype.init = function() {
     let forElId = this.element_.getAttribute('for');
 
     if (forElId) {
-      if (/^[A-Za-z0-9\_\-]+$/.test(forElId)) {
+      if (/^[A-Za-z0-9_-]+$/.test(forElId)) {
         forElId = `#${forElId}`;
       }
       this.forElement_ = document.querySelector(forElId);

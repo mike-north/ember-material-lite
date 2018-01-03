@@ -1,13 +1,15 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { computed } from '@ember/object';
+import { dasherize } from '@ember/string';
+import { A } from '@ember/array';
 import MdlTabs from './mdl-tabs';
 import ChildComponentSupport from 'ember-composability/mixins/child-component-support';
 import layout from '../templates/components/mdl-tab';
 
-const { Component, computed, String: { dasherize }, A } = Ember;
-
 export default Component.extend(ChildComponentSupport, {
-  layout,
+  // eslint-disable-next-line
   _parentComponentTypes: new A([MdlTabs]),
+  layout,
   classNames: ['mdl-tabs__panel'],
   classNameBindings: ['isActive:is-active'],
   isActive: false,

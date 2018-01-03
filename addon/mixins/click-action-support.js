@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-const { Mixin } = Ember;
+/* eslint-disable ember/closure-actions*/
+import Mixin from '@ember/object/mixin';
 
 export default Mixin.create({
   click() {

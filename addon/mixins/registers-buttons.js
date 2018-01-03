@@ -1,6 +1,6 @@
-import Ember from 'ember';
-
-const { A, Mixin, computed: { empty } } = Ember;
+import { A } from '@ember/array';
+import Mixin from '@ember/object/mixin';
+import { empty } from '@ember/object/computed';
 
 export default Mixin.create({
   _registersButtons: true,
