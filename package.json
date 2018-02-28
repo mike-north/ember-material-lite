@@ -45,7 +45,7 @@
     "ember-truth-helpers": "~2.0.0",
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-node": "^5.2.1",
-    "greenkeeper-lockfile": "^1.2.1",
+    "greenkeeper-lockfile": "^1.13.3",
     "loader.js": "^4.2.3"
   },
   "keywords": [
