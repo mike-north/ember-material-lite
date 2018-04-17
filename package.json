@@ -39,7 +39,7 @@
     "ember-composability": "~0.3.1",
     "ember-disable-prototype-extensions": "^1.1.0",
     "ember-export-application-global": "^2.0.0",
-    "ember-load-initializers": "^1.0.0",
+    "ember-load-initializers": "1.0.0",
     "ember-resolver": "^4.1.0",
     "ember-source": "^2.13.2",
     "ember-truth-helpers": "~2.0.0",
