@@ -52,7 +52,7 @@
     "ember-addon"
   ],
   "dependencies": {
-    "chalk": "^2.3.0",
+    "chalk": "^2.4.1",
     "ember-cli-babel": "^6.1.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-sass": "^7.1.3",
