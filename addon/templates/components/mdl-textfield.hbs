@@ -1,14 +1,14 @@
 {{#if isExpandable}}
   {{mdl-button for=elementId tagName='label' icon=expandableIcon  hasRipples=false isColored=false}}
   <div class="mdl-textfield__expandable-holder">
-    {{input class="mdl-textfield__input" type=type pattern=pattern id=_inputId disabled=disabled value=value}}
+    {{input class="mdl-textfield__input" type=type pattern=pattern id=_inputId disabled=disabled value=value name=name}}
     <label class="mdl-textfield__label" for="{{_inputId}}">{{label}}</label>
     {{#if errorMessage}}
       <span class="mdl-textfield__error">{{errorMessage}}</span>
     {{/if}}
   </div>
 {{else}}
-  {{input class="mdl-textfield__input" type=type pattern=pattern id=_inputId disabled=disabled value=value}}
+  {{input class="mdl-textfield__input" type=type pattern=pattern id=_inputId disabled=disabled value=value name=name}}
   <label class="mdl-textfield__label">{{label}}</label>
   {{#if errorMessage}}
     <span class="mdl-textfield__error">{{errorMessage}}</span>
