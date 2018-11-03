@@ -74,3 +74,19 @@ after_success:
 # Push the new commit
 - /bin/bash lib/try-generate-pages.sh
 - git checkout master
+
+
+
+stages:
+  - basic test
+  - additional tests
+jobs:
+  fail_fast: true
+  include:
+  - stage: basic test
+    env: EMBER_TRY_SCENARIO=ember-release
+  - stage: additional tests
+    env: EMBER_TRY_SCENARIO=ember-lts-2.12
+  - env: EMBER_TRY_SCENARIO=ember-lts-2.16
+  - env: EMBER_TRY_SCENARIO=ember-beta
+  - env: EMBER_TRY_SCENARIO=ember-canary
