@@ -2,20 +2,20 @@ import { run } from '@ember/runloop';
 import { module, test } from 'qunit';
 import startApp from '../../tests/helpers/start-app';
 
-module('Acceptance | footer', {
-  beforeEach() {
+module('Acceptance | footer', function(hooks) {
+  hooks.beforeEach(function() {
     this.application = startApp();
-  },
+  });
 
-  afterEach() {
+  hooks.afterEach(function() {
     run(this.application, 'destroy');
-  }
-});
+  });
 
-test('visiting /footer', function(assert) {
-  visit('/footer');
+  test('visiting /footer', function(assert) {
+    visit('/footer');
 
-  andThen(function() {
-    assert.equal(currentURL(), '/footer');
+    andThen(function() {
+      assert.equal(currentURL(), '/footer');
+    });
   });
 });

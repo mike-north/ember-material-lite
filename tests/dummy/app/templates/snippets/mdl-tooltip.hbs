@@ -1,22 +1,24 @@
-<p> <!-- A simple tooltip -->
+<p>
+  {{! A simple tooltip }}
   <span id="mike">Mike's span</span>
 
-  {{#mdl-tooltip for='mike'}}Test{{/mdl-tooltip}}
+  {{#mdl-tooltip for="mike"}}Test{{/mdl-tooltip}}
 
 </p>
 
-<p> <!-- A large tooltip -->
+<p>
+  {{! A large tooltip }}
   <span id="other">Mike's other span</span>
 
-  {{#mdl-tooltip for='other' isLarge=true}}
-    {{mdl-icon icon='forum'}}
+  {{#mdl-tooltip for="other" isLarge=true}}
+    {{mdl-icon icon="forum"}}
     You need another span?<br><em>Really?</em>
   {{/mdl-tooltip}}
 
 </p>
 
-{{#mdl-button tooltipText='This is my tooltip' class='abc'}}A button {{/mdl-button}}
-{{#mdl-tooltip for='.abc'}}
+{{#mdl-button tooltipText="This is my tooltip" class="abc"}}A button {{/mdl-button}}
+{{#mdl-tooltip for=".abc"}}
   This is a tooltip on a button
-  {{mdl-icon icon='wifi_tethering'}}
+  {{mdl-icon icon="wifi_tethering"}}
 {{/mdl-tooltip}}

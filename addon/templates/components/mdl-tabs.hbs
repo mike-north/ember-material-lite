@@ -2,9 +2,21 @@
 <div class="mdl-tabs__tab-bar">
   {{#each composableChildren as |tab|}}
     {{#if (eq tab.title active)}}
-      <a class='mdl-tabs__tab is-active' href='#{{tab.dasherizedTitle}}' {{action 'tabClicked' tab}}>{{tab.title}}</a>
+      <a
+        class="mdl-tabs__tab is-active"
+        href="#{{tab.dasherizedTitle}}"
+        {{action "tabClicked" tab}}
+      >
+        {{tab.title}}
+      </a>
     {{else}}
-      <a class='mdl-tabs__tab' href='#{{tab.dasherizedTitle}}' {{action 'tabClicked' tab}}>{{tab.title}}</a>
+      <a
+        class="mdl-tabs__tab"
+        href="#{{tab.dasherizedTitle}}"
+        {{action "tabClicked" tab}}
+      >
+        {{tab.title}}
+      </a>
     {{/if}}
   {{/each}}
 </div>

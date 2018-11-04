@@ -1,126 +1,133 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('mdl-radio', 'Integration | Component | mdl radio', {
-  integration: true
-});
+module('Integration | Component | mdl radio', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  assert.expect(3);
+  hooks.beforeEach(function() {
+    this.actions = {};
+    this.send = (actionName, ...args) => this.actions[actionName].apply(this, args);
+  });
 
-  this.render(hbs`{{mdl-radio}}`);
-  assert.equal(this.$().text().trim(), '');
+  test('it renders', async function(assert) {
+    assert.expect(3);
 
-  this.render(hbs`{{mdl-radio text='Mike'}}`);
-  assert.equal(this.$().text().trim(), 'Mike');
+    await render(hbs`{{mdl-radio}}`);
+    assert.equal(this.$().text().trim(), '');
 
-  this.render(hbs`
-    {{#mdl-radio}}
-      template block text
-    {{/mdl-radio}}
-  `);
+    await render(hbs`{{mdl-radio text='Mike'}}`);
+    assert.equal(this.$().text().trim(), 'Mike');
 
-  assert.equal(this.$().text().trim(), 'template block text');
-});
+    await render(hbs`
+      {{#mdl-radio}}
+        template block text
+      {{/mdl-radio}}
+    `);
 
-test('selection state test (only default group)', function(assert) {
-  assert.expect(5);
+    assert.equal(this.$().text().trim(), 'template block text');
+  });
 
-  this.render(hbs`
-    {{mdl-radio checked=true value='tom' text='Tom'}}
-    {{mdl-radio value='stef' text='Stefan'}}
-    {{mdl-radio value='yehuda' text='Yehuda'}}
-  `);
+  test('selection state test (only default group)', async function(assert) {
+    assert.expect(5);
 
-  assert.equal(this.$().text().trim().replace(/[\n\s]+/g, ''), 'TomStefanYehuda');
+    await render(hbs`
+      {{mdl-radio checked=true value='tom' text='Tom'}}
+      {{mdl-radio value='stef' text='Stefan'}}
+      {{mdl-radio value='yehuda' text='Yehuda'}}
+    `);
 
-  assert.equal(this.$('input:checked').length, 1, 'One button is selected');
-  assert.equal(this.$('input:checked').val(), 'tom', 'Tom is selected');
+    assert.equal(this.$().text().trim().replace(/[\n\s]+/g, ''), 'TomStefanYehuda');
 
-  this.$('input[value="stef"]').click();
+    assert.equal(this.$('input:checked').length, 1, 'One button is selected');
+    assert.equal(this.$('input:checked').val(), 'tom', 'Tom is selected');
 
-  assert.equal(this.$('input:checked').length, 1, 'One button is selected');
-  assert.equal(this.$('input:checked').val(), 'stef', 'Stef is selected');
-});
+    this.$('input[value="stef"]').click();
 
-test('selection state test (two groups)', function(assert) {
-  assert.expect(6);
+    assert.equal(this.$('input:checked').length, 1, 'One button is selected');
+    assert.equal(this.$('input:checked').val(), 'stef', 'Stef is selected');
+  });
 
-  this.render(hbs`
-    {{mdl-radio checked=true value='tom' text='Tom'}}
-    {{mdl-radio value='stef' text='Stefan'}}
-    {{mdl-radio name='katz' value='yehuda' text='Yehuda'}}
-    {{mdl-radio name='katz' value='leah' text='Leah'}}
-  `);
+  test('selection state test (two groups)', async function(assert) {
+    assert.expect(6);
 
-  assert.equal(this.$().text().trim().replace(/[\n\s]+/g, ''), 'TomStefanYehudaLeah');
+    await render(hbs`
+      {{mdl-radio checked=true value='tom' text='Tom'}}
+      {{mdl-radio value='stef' text='Stefan'}}
+      {{mdl-radio name='katz' value='yehuda' text='Yehuda'}}
+      {{mdl-radio name='katz' value='leah' text='Leah'}}
+    `);
 
-  assert.equal(this.$('input:checked').length, 1, 'One button is selected');
-  assert.equal(this.$('input:checked').val(), 'tom', 'Tom is selected');
+    assert.equal(this.$().text().trim().replace(/[\n\s]+/g, ''), 'TomStefanYehudaLeah');
 
-  this.$('input[value="leah"]').click();
+    assert.equal(this.$('input:checked').length, 1, 'One button is selected');
+    assert.equal(this.$('input:checked').val(), 'tom', 'Tom is selected');
 
-  assert.equal(this.$('input:checked').length, 2, 'Two buttons are selected');
-  assert.equal(this.$('input:checked[name="default"]').val(), 'tom', 'Tom is selected');
-  assert.equal(this.$('input:checked[name="katz"]').val(), 'leah', 'Leah is selected');
-});
+    this.$('input[value="leah"]').click();
 
-test('action "action" test', function(assert) {
-  assert.expect(3);
+    assert.equal(this.$('input:checked').length, 2, 'Two buttons are selected');
+    assert.equal(this.$('input:checked[name="default"]').val(), 'tom', 'Tom is selected');
+    assert.equal(this.$('input:checked[name="katz"]').val(), 'leah', 'Leah is selected');
+  });
 
-  let counts = {
-    tom: 0,
-    yehuda: 0,
-    stef: 0
-  };
+  test('action "action" test', async function(assert) {
+    assert.expect(3);
 
-  this.on('tomSelected', () => counts.tom++);
-  this.on('yehudaSelected', () => counts.yehuda++);
-  this.on('stefSelected', () => counts.stef++);
+    let counts = {
+      tom: 0,
+      yehuda: 0,
+      stef: 0
+    };
 
-  this.render(hbs`
-    {{mdl-radio checked=true value='tom' text='Tom' action='tomSelected'}}
-    {{mdl-radio value='stef' text='Stefan' action='stefSelected'}}
-    {{mdl-radio value='yehuda' text='Yehuda' action='yehudaSelected'}}
-  `);
+    this.actions.tomSelected = () => counts.tom++;
+    this.actions.yehudaSelected = () => counts.yehuda++;
+    this.actions.stefSelected = () => counts.stef++;
 
-  this.$('input[value="stef"]').click();
-  assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 0 }, 'stef: 1');
+    await render(hbs`
+      {{mdl-radio checked=true value='tom' text='Tom' action='tomSelected'}}
+      {{mdl-radio value='stef' text='Stefan' action='stefSelected'}}
+      {{mdl-radio value='yehuda' text='Yehuda' action='yehudaSelected'}}
+    `);
 
-  this.$('input[value="yehuda"]').click();
-  assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 1 }, 'stef: 1, yehuda: 1');
+    this.$('input[value="stef"]').click();
+    assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 0 }, 'stef: 1');
 
-  this.$('input[value="stef"]').click();
-  assert.deepEqual(counts, { tom: 0, stef: 2, yehuda: 1 }, 'stef: 2, yehuda: 1');
+    this.$('input[value="yehuda"]').click();
+    assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 1 }, 'stef: 1, yehuda: 1');
 
-});
+    this.$('input[value="stef"]').click();
+    assert.deepEqual(counts, { tom: 0, stef: 2, yehuda: 1 }, 'stef: 2, yehuda: 1');
 
-test('action "change" test', function(assert) {
-  assert.expect(3);
+  });
 
-  let counts = {
-    tom: 0,
-    yehuda: 0,
-    stef: 0
-  };
+  test('action "change" test', async function(assert) {
+    assert.expect(3);
 
-  this.on('tomChanged', () => counts.tom++);
-  this.on('yehudaChanged', () => counts.yehuda++);
-  this.on('stefChanged', () => counts.stef++);
+    let counts = {
+      tom: 0,
+      yehuda: 0,
+      stef: 0
+    };
 
-  this.render(hbs`
-    {{mdl-radio checked=true value='tom' text='Tom' on-change='tomChanged'}}
-    {{mdl-radio value='stef' text='Stefan' on-change='stefChanged'}}
-    {{mdl-radio value='yehuda' text='Yehuda' on-change='yehudaChanged'}}
-  `);
+    this.actions.tomChanged = () => counts.tom++;
+    this.actions.yehudaChanged = () => counts.yehuda++;
+    this.actions.stefChanged = () => counts.stef++;
 
-  this.$('input[value="stef"]').click();
-  assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 0 }, 'stef: 1');
+    await render(hbs`
+      {{mdl-radio checked=true value='tom' text='Tom' on-change='tomChanged'}}
+      {{mdl-radio value='stef' text='Stefan' on-change='stefChanged'}}
+      {{mdl-radio value='yehuda' text='Yehuda' on-change='yehudaChanged'}}
+    `);
 
-  this.$('input[value="yehuda"]').click();
-  assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 1 }, 'stef: 1, yehuda: 1');
+    this.$('input[value="stef"]').click();
+    assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 0 }, 'stef: 1');
 
-  this.$('input[value="stef"]').click();
-  assert.deepEqual(counts, { tom: 0, stef: 2, yehuda: 1 }, 'stef: 2, yehuda: 1');
+    this.$('input[value="yehuda"]').click();
+    assert.deepEqual(counts, { tom: 0, stef: 1, yehuda: 1 }, 'stef: 1, yehuda: 1');
 
+    this.$('input[value="stef"]').click();
+    assert.deepEqual(counts, { tom: 0, stef: 2, yehuda: 1 }, 'stef: 2, yehuda: 1');
+
+  });
 });

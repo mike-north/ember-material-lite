@@ -1,18 +1,18 @@
 <thead>
-	<tr>
-	{{#each composableChildren as |child|}}
-		{{#if child.isNonNumeric}}
-			<th class="mdl-data-table__cell--non-numeric">{{child.label}}</th>
-		{{else}}
-			<th>{{child.label}}</th>
-		{{/if}}
-	{{/each}}		
-	</tr>
+  <tr>
+    {{#each composableChildren as |child|}}
+      {{#if child.isNonNumeric}}
+        <th class="mdl-data-table__cell--non-numeric">{{child.label}}</th>
+      {{else}}
+        <th>{{child.label}}</th>
+      {{/if}}
+    {{/each}}		
+  </tr>
 </thead>
 <tbody>
-	{{#each content as |row|}}
-	<tr>
-		{{yield row}}
-	</tr>
-	{{/each}}
+  {{#each content as |row|}}
+    <tr>
+      {{yield row}}
+    </tr>
+  {{/each}}
 </tbody>

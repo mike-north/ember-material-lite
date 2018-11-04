@@ -1,5 +1,8 @@
-import { moduleForComponent } from 'ember-qunit';
+import { module } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 
-moduleForComponent('mdl-menu-item', 'Integration | Component | mdl menu item', {
-  integration: true
+import '@ember/test-helpers';
+
+module('Integration | Component | mdl menu item', function(hooks) {
+  setupRenderingTest(hooks);
 });

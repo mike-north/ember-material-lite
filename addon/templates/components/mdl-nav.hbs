@@ -1,13 +1,33 @@
 {{#if includeHeader}}
-<header class={{_headerClassString}}>
-  <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">{{title}}</span>
-    <div class="mdl-layout-spacer"></div>
-    {{#if includeHeaderLinks}}
-    <nav class="mdl-navigation mdl-layout--large-screen-only">
-      {{#each _headerNavItems as |navItem|}}
+  <header class={{_headerClassString}}>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">{{title}}</span>
+      <div class="mdl-layout-spacer"></div>
+      {{#if includeHeaderLinks}}
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          {{#each _headerNavItems as |navItem|}}
+            {{#if navItem.route}}
+              {{link-to navItem.name navItem.route class="mdl-navigation__link" bubbles=true}}
+            {{else}}
+              <span class="mdl-navigation__link">
+                {{navItem.name}}
+              </span>
+            {{/if}}
+          {{/each}}
+        </nav>
+      {{/if}}
+    </div>
+  </header>
+{{/if}}
+{{#if includeDrawer}}
+  <div class="mdl-layout__drawer">
+    {{#if includeDrawerTitle}}
+      <span class="mdl-layout-title">{{mobileTitle}}</span>
+    {{/if}}
+    <nav class="mdl-navigation">
+      {{#each _drawerNavItems as |navItem|}}
         {{#if navItem.route}}
-          {{link-to navItem.name navItem.route class='mdl-navigation__link' bubbles=true}}
+          {{link-to navItem.name navItem.route class="mdl-navigation__link" bubbles=true}}
         {{else}}
           <span class="mdl-navigation__link">
             {{navItem.name}}
@@ -15,27 +35,7 @@
         {{/if}}
       {{/each}}
     </nav>
-    {{/if}}
   </div>
-</header>
-{{/if}}
-{{#if includeDrawer}}
-<div class="mdl-layout__drawer">
-  {{#if includeDrawerTitle}}
-  <span class="mdl-layout-title">{{mobileTitle}}</span>
-  {{/if}}
-  <nav class="mdl-navigation">
-    {{#each _drawerNavItems as |navItem|}}
-      {{#if navItem.route}}
-        {{link-to navItem.name navItem.route class='mdl-navigation__link' bubbles=true}}
-      {{else}}
-        <span class="mdl-navigation__link">
-          {{navItem.name}}
-        </span>
-      {{/if}}
-    {{/each}}
-  </nav>
-</div>
 {{/if}}
 <main class="mdl-layout__content">
   <div class="page-content">

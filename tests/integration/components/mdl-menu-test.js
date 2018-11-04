@@ -1,26 +1,28 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('mdl-menu', 'Integration | Component | mdl menu', {
-  integration: true
-});
+module('Integration | Component | mdl menu', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('it renders', function(assert) {
-  assert.expect(2);
+  test('it renders', async function(assert) {
+    assert.expect(2);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+    // Set any properties with this.set('myProperty', 'value');
+    // Handle any actions with this.on('myAction', function(val) { ... });
 
-  this.render(hbs`{{mdl-menu}}`);
+    await render(hbs`{{mdl-menu}}`);
 
-  assert.equal(this.$().text().trim(), 'more_vert');
+    assert.equal(this.$().text().trim(), 'more_vert');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#mdl-menu}}
-      template block text
-    {{/mdl-menu}}
-  `);
+    // Template block usage:
+    await render(hbs`
+      {{#mdl-menu}}
+        template block text
+      {{/mdl-menu}}
+    `);
 
-  assert.equal(this.$().text().trim().replace(/\s/g, ''), 'more_verttemplateblocktext');
+    assert.equal(this.$().text().trim().replace(/\s/g, ''), 'more_verttemplateblocktext');
+  });
 });

@@ -1,34 +1,58 @@
 <div class="mdl-cell mdl-cell--12-col">
-<h2>Navbars</h2>
+  <h2>Navbars</h2>
 </div>
 
-{{#x-example snippet='mdl-nav-fixed-header' class='nav-bar-example no-padding'
-	title='Fixed Header' cols=12}}
-Using the <code>fixedHeader</code> option will keep the header stuck to the top of the screen, even on small screens
+{{#x-example
+  snippet="mdl-nav-fixed-header"
+  class="nav-bar-example no-padding"
+  title="Fixed Header"
+  cols=12
+}}
+  Using the <code>fixedHeader</code> option will keep the header stuck to the top of the screen, even on small screens
 {{/x-example}}
 
-{{#x-example snippet='mdl-nav-scroll-header' class='nav-bar-example tall200 no-padding'
-	title='Scrolling Header' cols=12}}
-Using the <code>scrollHeader</code> option will allow the header to scroll with content
+{{#x-example
+  snippet="mdl-nav-scroll-header"
+  class="nav-bar-example tall200 no-padding"
+  title="Scrolling Header"
+  cols=12
+}}
+  Using the <code>scrollHeader</code> option will allow the header to scroll with content
 {{/x-example}}
 
-{{#x-example snippet='mdl-nav-fixed-drawer' class='nav-bar-example no-padding'
-	title='Fixed Drawer' cols=12}}
-Using the <code>fixedDrawer</code> keep the drawer menu on screen, for large and medium screens -- it remains collapsable on small screens. You may optionally provide a different title to use on the drawer.
+{{#x-example
+  snippet="mdl-nav-fixed-drawer"
+  class="nav-bar-example no-padding"
+  title="Fixed Drawer"
+  cols=12
+}}
+  Using the <code>fixedDrawer</code> keep the drawer menu on screen, for large and medium screens -- it remains collapsable on small screens. You may optionally provide a different title to use on the drawer.
 {{/x-example}}
 
-{{#x-example snippet='mdl-nav-drawer-only' class='nav-bar-example no-padding'
-	title='Drawer Only' cols=12}}
-You may use the <code>includeDrawer</code>, <code>includeHeader</code>, <code>includeDrawerTitle</code> and <code>includeHeaderLinks</code> options, to disable parts of the nav. For example, if you just wanted the drawer with no header:
+{{#x-example
+  snippet="mdl-nav-drawer-only"
+  class="nav-bar-example no-padding"
+  title="Drawer Only"
+  cols=12
+}}
+  You may use the <code>includeDrawer</code>, <code>includeHeader</code>, <code>includeDrawerTitle</code> and <code>includeHeaderLinks</code> options, to disable parts of the nav. For example, if you just wanted the drawer with no header:
 {{/x-example}}
 
-{{#x-example snippet='mdl-nav-image' class='nav-bar-example no-padding'
-	title='Image' cols=12}}
-	An image may be used with a "transparent" nav. You will need to use a CSS class on your nav, and apply some style to add a background image:
-	{{code-snippet name="layout-transparent.scss"}}
+{{#x-example
+  snippet="mdl-nav-image"
+  class="nav-bar-example no-padding"
+  title="Image"
+  cols=12
+}}
+  An image may be used with a "transparent" nav. You will need to use a CSS class on your nav, and apply some style to add a background image:
+  {{code-snippet name="layout-transparent.scss"}}
 {{/x-example}}
 
-{{#x-example snippet='mdl-nav-close-on-click' class='nav-bar-example no-padding'
-  title='Closing drawer on click' cols=12}}
+{{#x-example
+  snippet="mdl-nav-close-on-click"
+  class="nav-bar-example no-padding"
+  title="Closing drawer on click"
+  cols=12
+}}
   If you want the drawer to close when an item is clicked, you can use the <code>closeDrawerOnItemClick</code> option (false by default, for backwards compatibility)
 {{/x-example}}

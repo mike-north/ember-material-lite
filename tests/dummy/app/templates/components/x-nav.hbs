@@ -1,37 +1,47 @@
 {{#if includeHeader}}
-<header class={{_headerClassString}}>
-  <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">{{title}}</span>
-    <div class="mdl-layout-spacer"></div>
-    {{#if includeHeaderLinks}}
-    <nav class="mdl-navigation mdl-layout--large-screen-only">
-      {{#each _headerNavItems as |navItem|}}
-        {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
+  <header class={{_headerClassString}}>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">{{title}}</span>
+      <div class="mdl-layout-spacer"></div>
+      {{#if includeHeaderLinks}}
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          {{#each _headerNavItems as |navItem|}}
+            {{link-to navItem.name navItem.route class="mdl-navigation__link"}}
+          {{/each}}
+          <a
+            class="mdl-navigation__link github-link"
+            href="https://github.com/truenorth/ember-material-lite"
+            rel="noopener"
+            target="_blank"
+          >
+            <i class="material-icons">code</i>
+            GitHub
+          </a>
+        </nav>
+      {{/if}}
+    </div>
+  </header>
+{{/if}}
+{{#if includeDrawer}}
+  <div class="mdl-layout__drawer">
+    {{#if includeDrawerTitle}}
+      <span class="mdl-layout-title">{{mobileTitle}}</span>
+    {{/if}}
+    <nav class="mdl-navigation">
+      {{#each _drawerNavItems as |navItem|}}
+        {{link-to navItem.name navItem.route class="mdl-navigation__link"}}
       {{/each}}
-      <a class='mdl-navigation__link github-link' href='https://github.com/truenorth/ember-material-lite' target='_blank'>
+      <a
+        rel="noopener"
+        class="mdl-navigation__link github-link drawer"
+        href="https://github.com/truenorth/ember-material-lite"
+        target="_blank"
+      >
         <i class="material-icons">code</i>
         GitHub
       </a>
     </nav>
-    {{/if}}
   </div>
-</header>
-{{/if}}
-{{#if includeDrawer}}
-<div class="mdl-layout__drawer">
-  {{#if includeDrawerTitle}}
-    <span class="mdl-layout-title">{{mobileTitle}}</span>
-  {{/if}}
-  <nav class="mdl-navigation">
-    {{#each _drawerNavItems as |navItem|}}
-      {{link-to navItem.name navItem.route class='mdl-navigation__link'}}
-    {{/each}}
-    <a class='mdl-navigation__link github-link drawer' href='https://github.com/truenorth/ember-material-lite' target='_blank'>
-        <i class="material-icons">code</i>
-        GitHub
-      </a>
-  </nav>
-</div>
 {{/if}}
 <main class="mdl-layout__content">
   <div class="page-content">

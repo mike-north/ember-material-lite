@@ -1,19 +1,20 @@
 {{#if emptySnippet}}
-  {{#mdl-card title='Empty Content'}}
-  <div class="mdl-card__supporting-text">
-    You must provide a snippet parameter
-  </div>
+  {{#mdl-card title="Empty Content"}}
+    <div class="mdl-card__supporting-text">
+      You must provide a snippet parameter
+    </div>
   {{/mdl-card}}
 {{else}}
-  {{#mdl-card title=title class='example-card'}}
+  {{#mdl-card title=title class="example-card"}}
     <div class="mdl-card__supporting-text">
       {{yield}}
     </div>
     <div class="code">
-    {{code-snippet name=snippetName}}
+      {{code-snippet name=snippetName}}
     </div>
     <div class="example">
-    {{partial partialName}}
+      {{! template-lint-disable }}
+      {{partial partialName}}
     </div>
   {{/mdl-card}}
 
