@@ -44,7 +44,7 @@ script:
   - yarn lint:js
   # Usually, it's ok to finish the test scenario without reverting
   #  to the addon's original dependency state, skipping "cleanup".
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO  && yarn travis-deploy-once "yarn semantic-release"
 
 after_success:
 # Remove the downloaded copy of phantomJS

@@ -10,7 +10,9 @@
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
     "start": "ember serve",
-    "test": "ember try:each"
+    "test": "ember try:each",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": "https://github.com/mike-north/ember-material-lite.git",
   "homepage": "https://github.com/mike-north/ember-material-lite",
