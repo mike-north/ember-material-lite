@@ -13,7 +13,7 @@ module.exports = function(environment) {
       }
     },
     sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
+      includePaths: ['node_modules/material-design-lite/src']
     },
     APP: {
       // Here you can pass flags/options to your application instance

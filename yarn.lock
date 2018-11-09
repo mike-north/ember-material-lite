@@ -8757,6 +8757,11 @@ matcher-collection@^1.0.0, matcher-collection@^1.0.4, matcher-collection@^1.0.5:
   dependencies:
     minimatch "^3.0.2"
 
+material-design-lite@~1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/material-design-lite/-/material-design-lite-1.0.6.tgz#dac5dfa6a7cfcb5ca399c35e85b7d5ea8834c282"
+  integrity sha1-2sXfpqfPy1yjmcNehbfV6og0woI=
+
 md5-hex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/md5-hex/-/md5-hex-2.0.0.tgz#d0588e9f1c74954492ecd24ac0ac6ce997d92e33"
