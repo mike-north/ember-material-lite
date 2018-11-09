@@ -68,6 +68,6 @@ jobs:
   - stage: basic test
     env: EMBER_TRY_SCENARIO=ember-release
   - stage: additional tests
-    env: EMBER_TRY_SCENARIO=ember-lts-2.12
-  - env: EMBER_TRY_SCENARIO=ember-lts-2.16
+    env: EMBER_TRY_SCENARIO=ember-lts-2.16
+  - env: EMBER_TRY_SCENARIO=ember-lts-2.18
   - env: EMBER_TRY_SCENARIO=ember-beta
