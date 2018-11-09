@@ -52,6 +52,7 @@
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^5.0.1",
     "ember-source": "^3.5.1",
+    "ember-source-channel-url": "^1.1.0",
     "ember-truth-helpers": "^2.1.0",
     "ember-try": "^1.0.0-beta.3",
     "eslint-plugin-ember": "5.2.0",
@@ -60,8 +61,8 @@
     "husky": "1.1.2",
     "loader.js": "^4.7.0",
     "sass": "^1.14.3",
-    "travis-deploy-once": "^5.0.9",
-    "semantic-release": "^15.10.8"
+    "semantic-release": "^15.10.8",
+    "travis-deploy-once": "^5.0.9"
   },
   "keywords": [
     "ember-addon"
