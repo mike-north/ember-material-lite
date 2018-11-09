@@ -1,6 +1,6 @@
 {
   "name": "ember-material-lite",
-  "version": "0.2.6",
+  "version": "0.0.0-development",
   "description": "Material Design Lite for Ember.js Apps",
   "directories": {
     "doc": "doc",
@@ -60,7 +60,8 @@
     "husky": "1.1.2",
     "loader.js": "^4.7.0",
     "sass": "^1.14.3",
-    "travis-deploy-once": "^5.0.9"
+    "travis-deploy-once": "^5.0.9",
+    "semantic-release": "^15.10.8"
   },
   "keywords": [
     "ember-addon"
