@@ -40,7 +40,6 @@ module.exports = {
       plugins: ['node'],
       rules: Object.assign(
         {},
-        // eslint-disable-next-line no-undef
         require('eslint-plugin-node').configs.recommended.rules,
         {
           // add your custom rules and overrides for node files here
