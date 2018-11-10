@@ -841,16 +841,18 @@
   resolved "https://registry.yarnpkg.com/@mike-north/js-lib-renovate-config/-/js-lib-renovate-config-0.0.1.tgz#9e2878a5b9896b8b2838340f2a29f760e28e5ec5"
   integrity sha512-I/MYzrZJlMAKWZUJ4yxQK6tp9kCBKKdivNZ89ZXy/+rK6GjOIjX/UBsH3Xx3gdbQq0a3rmw0NHy+VJ9HKQWOUg==
 
-"@mike-north/js-lib-semantic-release-config@0.0.0-development":
-  version "0.0.0-development"
-  resolved "https://registry.yarnpkg.com/@mike-north/js-lib-semantic-release-config/-/js-lib-semantic-release-config-0.0.0-development.tgz#b3c0f8972036c74dea94208a7f57b5d3a2f7dc1b"
-  integrity sha512-dXMVK3duEXXb8guYfzcZ2D2Rs1/dFbbak5H5DJwcsDqQqlpjinb9wNJNNByOlz9eEUi48fenbO5TQFDn+9ioOg==
+"@mike-north/js-lib-semantic-release-config@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mike-north/js-lib-semantic-release-config/-/js-lib-semantic-release-config-1.0.0.tgz#8ec3702da90c3d93c0ee71bd3a75c7f8192a56de"
+  integrity sha512-0R4KS60dHVxV1+Fg9y7oTbR/rFMNfrGPyTLD8fA03GpKftsPwaa17hUZPtjiMX91yRW7sicehk0TBGJGabu/Ig==
   dependencies:
     "@semantic-release/changelog" "^3.0.0"
     "@semantic-release/error" "^2.2.0"
     "@semantic-release/exec" "^3.0.2"
-    "@semantic-release/git" "^7.0.1"
+    "@semantic-release/git" "^7.0.5"
     "@semantic-release/github" "^5.0.2"
+    semantic-release "^15.9.9"
+    travis-deploy-once "^5.0.9"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -919,7 +921,7 @@
     lodash "^4.17.4"
     parse-json "^4.0.0"
 
-"@semantic-release/git@^7.0.1":
+"@semantic-release/git@^7.0.5":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-7.0.5.tgz#640e66683dbbb0a0771e9968e2dc15ec5facaf38"
   integrity sha512-90TDMAQw9S5BXjygpEb8zdwLCnUmP5G2GfKHUvmFapFNh3UsI1AJljEUe5hJh/GOuHiyBD/whnCMYExsp8a34Q==
@@ -11507,7 +11509,7 @@ scss-tokenizer@^0.2.3:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
 
-semantic-release@15.10.8:
+semantic-release@15.10.8, semantic-release@^15.9.9:
   version "15.10.8"
   resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.10.8.tgz#07027a159199148998dc5f246ed6533d0441851c"
   integrity sha512-+n1eQArIw0TROFFwyf6csSLtKPt47goFbYk0ROAz3ja0r0ltV/ClKNCN6bkV2XzVlvTYqYFY6yutOIvPr1K4hQ==
@@ -12669,7 +12671,7 @@ traverse@~0.6.6:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.6.6.tgz#cbdf560fd7b9af632502fed40f918c157ea97137"
   integrity sha1-y99WD9e5r2MlAv7UD5GMFX6pcTc=
 
-travis-deploy-once@5.0.9:
+travis-deploy-once@5.0.9, travis-deploy-once@^5.0.9:
   version "5.0.9"
   resolved "https://registry.yarnpkg.com/travis-deploy-once/-/travis-deploy-once-5.0.9.tgz#c5a2f639e17d8fd542f66d25ade126179d5e8acf"
   integrity sha512-cyHFErzq0HTEGY29RAq1clqFdt/IkCrlcOmyM1cGoGnEyukrrFi1fpy6JH3Mlf+88XsFwvluqKVWzj2bdz3k8A==
