@@ -28,7 +28,7 @@
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "0.7.0",
     "@mike-north/js-lib-renovate-config": "1.0.0",
-    "@mike-north/js-lib-semantic-release-config": "0.0.0-development",
+    "@mike-north/js-lib-semantic-release-config": "1.0.0",
     "broccoli-asset-rev": "3.0.0",
     "coveralls": "3.0.2",
     "ember-cli": "3.5.0",
