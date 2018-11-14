@@ -61,7 +61,7 @@
     "husky": "1.1.4",
     "loader.js": "4.7.0",
     "qunit-dom": "0.8.0",
-    "sass": "1.14.3",
+    "sass": "1.15.0",
     "semantic-release": "15.11.0",
     "travis-deploy-once": "5.0.9"
   },
