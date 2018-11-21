@@ -62,7 +62,7 @@
     "loader.js": "4.7.0",
     "qunit-dom": "0.8.0",
     "sass": "1.15.1",
-    "semantic-release": "15.12.0",
+    "semantic-release": "15.12.1",
     "travis-deploy-once": "5.0.9"
   },
   "keywords": [
