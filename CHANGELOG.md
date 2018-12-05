@@ -1,3 +1,21 @@
+# [1.0.0](https://github.com/mike-north/ember-material-lite/compare/v0.2.7...v1.0.0) (2018-12-05)
+
+
+### Bug Fixes
+
+* update dependencies ([5c4a050](https://github.com/mike-north/ember-material-lite/commit/5c4a050))
+* **deps:** update dependency chalk to v2.4.1 ([b6d4d21](https://github.com/mike-north/ember-material-lite/commit/b6d4d21))
+
+
+### chore
+
+* remove sublime project ([1adc88d](https://github.com/mike-north/ember-material-lite/commit/1adc88d))
+
+
+### BREAKING CHANGES
+
+* 1.0 stable release starts now 🎉
+
 ## [0.2.7](https://github.com/mike-north/ember-material-lite/compare/v0.2.6...v0.2.7) (2018-11-09)
 
 
