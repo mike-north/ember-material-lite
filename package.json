@@ -60,7 +60,7 @@
     "husky": "1.1.4",
     "loader.js": "4.7.0",
     "qunit-dom": "0.8.2",
-    "sass": "1.15.1",
+    "sass": "1.15.2",
     "semantic-release": "15.12.3"
   },
   "keywords": [
