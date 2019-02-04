@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mike-north/ember-material-lite/compare/v1.0.0...v1.0.1) (2019-02-04)
+
+
+### Bug Fixes
+
+* **deps:** chalk ([df05eeb](https://github.com/mike-north/ember-material-lite/commit/df05eeb))
+
 # [1.0.0](https://github.com/mike-north/ember-material-lite/compare/v0.2.7...v1.0.0) (2018-12-05)
 
 
