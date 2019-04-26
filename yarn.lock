@@ -4688,10 +4688,10 @@ ember-source-channel-url@1.1.0, ember-source-channel-url@^1.0.1, ember-source-ch
   dependencies:
     got "^8.0.1"
 
-ember-source@3.9.0:
-  version "3.9.0"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.9.0.tgz#cab72c07c30d8313e1cae3ef9a68c0a3d7d1b7de"
-  integrity sha512-VHeovle0+ZBnIbEcuNcIl1+HfActbplkJBMcaXAj/sCp46ayNPHB0zl+0ix74j+MOTiu8GEXZ6GHaqgwGmhvMw==
+ember-source@3.9.1:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.9.1.tgz#e6c7b08f823f9a55e448af1cc439266cabc3e65e"
+  integrity sha512-0rfP1m3KbfylKNnxk4ZWy0jqwqIWGm5rb7ZZFn4zazVJFI6gEmratWadXfzwEgqG2ukRcW9F8frEk0utuaAnMg==
   dependencies:
     broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^3.0.2"
@@ -10237,12 +10237,12 @@ quick-temp@^0.1.0, quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quic
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
 
-qunit-dom@0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-0.8.4.tgz#8b75a73040df1735280fc2fab4c6a1a7f518488b"
-  integrity sha512-Ab2wCPQP2G2XdbIwhlUHMp3ROHh4XnqmK0ogHlpxwVIv+cXbW3/L6F9ucCThAMkjqCaxwZQQR+LaUHaaMxDCmw==
+qunit-dom@0.8.5:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-0.8.5.tgz#34b7cffb338e631c39955b21bdbe4d774090124e"
+  integrity sha512-I4GSy22ESUkoZYDSYsqFJoMvqhpmgd2iCYlrN7aWLEOdmumUkao3qz24/qVNZd1PAnoOQA78FefzNPRHePFx1A==
   dependencies:
-    broccoli-funnel "^2.0.0"
+    broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^3.0.1"
 
 qunit@~2.6.0:
