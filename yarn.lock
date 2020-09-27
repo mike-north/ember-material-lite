@@ -5735,10 +5735,10 @@ escodegen@^1.8.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-ember@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-9.0.0.tgz#34a86a31d12bded00f5967b43a54eeb548329dc3"
-  integrity sha512-P83EWqBos5FKQcTJDStWHwb1jfj5Xsrfq5rSB3r1P7dgcm3yTVyEXiTVgq0lBvNWN8vHGlQ6SfnUx8VjHgAxYA==
+eslint-plugin-ember@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-9.1.0.tgz#29122732ed144328048671de596f3705715bce50"
+  integrity sha512-DAXhnepKIkI1/m3Dm94pR77wgeabWk8d2soidKgdHD6ZqyX+rCK4wpTz7lVKT0t5EyxC8cQ3bLOId8fc/G+7ow==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
     ember-rfc176-data "^0.3.15"
@@ -11402,10 +11402,10 @@ quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quick-temp@^0.1.8:
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
 
-qunit-dom@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-1.4.0.tgz#912d3e99aac5f3ff8cb3296269ddc3855ae17801"
-  integrity sha512-kDR6A4IdDZBluyCRCfJLVoplWIAQdAijVfZdRN3yTBIjOyaFQT+BlHR0IsNTFbB7LAa0/6u/UQEYKClYvwjROQ==
+qunit-dom@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-1.5.0.tgz#f3e062562c18fb354b7657afd31890d89a24691d"
+  integrity sha512-VTFApYbzcYkL5Zg7XgZMgLgMI9JXEX+lwBS5bFy5hRkIaz9V38q7rN44svxFBNHWs96y3UaFaAYpOEmlQ0j+fw==
   dependencies:
     broccoli-funnel "^3.0.3"
     broccoli-merge-trees "^4.2.0"
