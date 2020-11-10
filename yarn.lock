@@ -5183,6 +5183,14 @@ crypto-random-string@^2.0.0:
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
 
+css-tree@^1.0.0-alpha.39:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-1.0.0.tgz#21993fa270d742642a90409a2c0cb3ac0298adf6"
+  integrity sha512-CdVYz/Yuqw0VdKhXPBIgi8DO3NicJVYZNWeX9XcIuSp9ZoFT5IcleVRW07O5rMjdcx1mb+MEJPknTTEW7DdsYw==
+  dependencies:
+    mdn-data "2.0.12"
+    source-map "^0.6.1"
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -5617,7 +5625,7 @@ ember-cli-babel@^7.0.0, ember-cli-babel@^7.1.3, ember-cli-babel@^7.19.0, ember-c
     rimraf "^3.0.1"
     semver "^5.5.0"
 
-ember-cli-babel@^7.13.0:
+ember-cli-babel@^7.13.0, ember-cli-babel@^7.23.0:
   version "7.23.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-7.23.0.tgz#ec580aa2c115d0810e454dd5c2fffce238284b92"
   integrity sha512-ix58DlRDAbGITtdJoRUPcAoQwKLYr/x/kIXjU9u1ATyhmuUjqb+0FDXghOWbkNihGiNOqBBR49+LBgK9AeBcNw==
@@ -6482,12 +6490,13 @@ escodegen@^1.8.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-plugin-ember@9.3.0:
-  version "9.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-9.3.0.tgz#77ec28a0c586ea55bbd30d140c784afcdf59e97b"
-  integrity sha512-qrzptSwC58HD8211vF8rGu+TRT8XzIsZVm6j4PleuSZqJ6k3VG8FKofQkb4ZBVU9jOJ0lnZCbYqBfjs4Iy/HHw==
+eslint-plugin-ember@9.6.0:
+  version "9.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ember/-/eslint-plugin-ember-9.6.0.tgz#607669732094081922660c3be5fc29f3caa3ee51"
+  integrity sha512-MNSXffxPhIiYaVc4eisRPeNoRb19W/2pHWiXwETlhQI9w/2VCyXLKY7c/8gtOCcjuEw4Xd5NiCMqxcNmyq5UzQ==
   dependencies:
     "@ember-data/rfc395-data" "^0.0.4"
+    css-tree "^1.0.0-alpha.39"
     ember-rfc176-data "^0.3.15"
     lodash.kebabcase "^4.1.1"
     snake-case "^3.0.3"
@@ -10191,6 +10200,11 @@ md5-o-matic@^0.1.1:
   resolved "https://registry.yarnpkg.com/md5-o-matic/-/md5-o-matic-0.1.1.tgz#822bccd65e117c514fab176b25945d54100a03c3"
   integrity sha1-givM1l4RfFFPqxdrJZRdVBAKA8M=
 
+mdn-data@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.12.tgz#bbb658d08b38f574bbb88f7b83703defdcc46844"
+  integrity sha512-ULbAlgzVb8IqZ0Hsxm6hHSlQl3Jckst2YEQS7fODu9ilNWy2LvcoSY7TRFIktABP2mdppBioc66va90T+NUs8Q==
+
 mdurl@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
@@ -12198,13 +12212,15 @@ quick-temp@^0.1.2, quick-temp@^0.1.3, quick-temp@^0.1.5, quick-temp@^0.1.8:
     rimraf "^2.5.4"
     underscore.string "~3.3.4"
 
-qunit-dom@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-1.5.0.tgz#f3e062562c18fb354b7657afd31890d89a24691d"
-  integrity sha512-VTFApYbzcYkL5Zg7XgZMgLgMI9JXEX+lwBS5bFy5hRkIaz9V38q7rN44svxFBNHWs96y3UaFaAYpOEmlQ0j+fw==
+qunit-dom@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-1.6.0.tgz#a4bea6a46329d221e4a317d712cb40709107b977"
+  integrity sha512-YwSqcLjQcRI0fUFpaSWwU10KIJPFW5Qh+d3cT5DOgx81dypRuUSiPkKFmBY/CDs/R1KdHRadthkcXg2rqAon8Q==
   dependencies:
     broccoli-funnel "^3.0.3"
     broccoli-merge-trees "^4.2.0"
+    ember-cli-babel "^7.23.0"
+    ember-cli-version-checker "^5.1.1"
 
 qunit@~2.6.0:
   version "2.6.2"
