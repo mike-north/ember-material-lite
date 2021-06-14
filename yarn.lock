@@ -1184,10 +1184,10 @@
     "@glimmer/env" "0.1.7"
     "@simple-dom/interface" "^1.4.0"
 
-"@glimmer/vm-babel-plugins@0.77.5":
-  version "0.77.5"
-  resolved "https://registry.yarnpkg.com/@glimmer/vm-babel-plugins/-/vm-babel-plugins-0.77.5.tgz#daffb6507aa6b08ec36f69d652897d339fdd0007"
-  integrity sha512-jTBM7fJMrIEy4/bCeI8e7ypR+AuWYzLA+KORCGbnTJtL/NYg4G8qwhQAZBtg1d3KmoqyqaCsyqE6f4/tzJO4eQ==
+"@glimmer/vm-babel-plugins@0.78.2":
+  version "0.78.2"
+  resolved "https://registry.yarnpkg.com/@glimmer/vm-babel-plugins/-/vm-babel-plugins-0.78.2.tgz#b530a19f54da385c7099a22cf348e9062d186838"
+  integrity sha512-GSEf16h6OCtKx7PsSvD21cLXZuVc6swW2rSOAvfLeZco1DEWMRgYTwkCkColydKZcQ3gvwbPBeYwTC2K6tlnjg==
   dependencies:
     babel-plugin-debug-macros "^0.3.4"
 
@@ -3181,6 +3181,14 @@ broccoli-file-creator@^1.1.1:
     broccoli-plugin "^1.1.0"
     mkdirp "^0.5.1"
 
+broccoli-file-creator@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/broccoli-file-creator/-/broccoli-file-creator-2.1.1.tgz#7351dd2496c762cfce7736ce9b49e3fce0c7b7db"
+  integrity sha512-YpjOExWr92C5vhnK0kmD81kM7U09kdIRZk9w4ZDCDHuHXW+VE/x6AGEOQQW3loBQQ6Jk+k+TSm8dESy4uZsnjw==
+  dependencies:
+    broccoli-plugin "^1.1.0"
+    mkdirp "^0.5.1"
+
 broccoli-filter@^1.2.2, broccoli-filter@^1.2.3:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/broccoli-filter/-/broccoli-filter-1.3.0.tgz#71e3a8e32a17f309e12261919c5b1006d6766de6"
@@ -5121,10 +5129,10 @@ ember-cli-htmlbars@^5.0.0:
     strip-bom "^4.0.0"
     walk-sync "^2.2.0"
 
-ember-cli-inject-live-reload@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-2.0.2.tgz#95edb543b386239d35959e5ea9579f5382976ac7"
-  integrity sha512-HDD6o/kBHT/kUtazklU0OW23q2jigIN42QmcpFdXUSvJ2/2SYA6yIqSUxWfJgISmtn5gTNZ2KPq1p3dLkhJxSQ==
+ember-cli-inject-live-reload@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-2.1.0.tgz#ef63c733c133024d5726405a3c247fa12e88a385"
+  integrity sha512-YV5wYRD5PJHmxaxaJt18u6LE6Y+wo455BnmcpN+hGNlChy2piM9/GMvYgTAz/8Vin8RJ5KekqP/w/NEaRndc/A==
   dependencies:
     clean-base-url "^1.0.0"
     ember-cli-version-checker "^3.1.3"
@@ -5512,20 +5520,21 @@ ember-source-channel-url@^3.0.0:
   dependencies:
     node-fetch "^2.6.0"
 
-ember-source@3.26.1:
-  version "3.26.1"
-  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.26.1.tgz#8c9e8a314fb0da447b944d64f9d92a80a628d7b5"
-  integrity sha512-5/NATBo5h9m1N52ITVksmjtGlYhGHLl4lDErAWv5/DC9zYe9ZR93NtymR6PEqrRilXc2x0KWd3NlOsWUoJRUOw==
+ember-source@3.27.5:
+  version "3.27.5"
+  resolved "https://registry.yarnpkg.com/ember-source/-/ember-source-3.27.5.tgz#8e9ce24c17e7a16dc3c2b128d3d3e24ea79e6726"
+  integrity sha512-oSGM9mD6BuOcGilYqU+F2MtCferQhKWO3REX1P9qgN1Wzfa5kXjbjBBdPNWfBtg7bZLGM27H8JgiV6+t3uGegA==
   dependencies:
     "@babel/helper-module-imports" "^7.8.3"
     "@babel/plugin-transform-block-scoping" "^7.8.3"
     "@babel/plugin-transform-object-assign" "^7.8.3"
     "@ember/edition-utils" "^1.2.0"
-    "@glimmer/vm-babel-plugins" "0.77.5"
+    "@glimmer/vm-babel-plugins" "0.78.2"
     babel-plugin-debug-macros "^0.3.3"
     babel-plugin-filter-imports "^4.0.0"
     broccoli-concat "^4.2.4"
     broccoli-debug "^0.6.4"
+    broccoli-file-creator "^2.1.1"
     broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^4.2.0"
     chalk "^4.0.0"
