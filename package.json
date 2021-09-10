@@ -67,7 +67,7 @@
     "ember-addon"
   ],
   "dependencies": {
-    "broccoli-funnel": "^2.0.1",
+    "broccoli-funnel": "^3.0.0",
     "broccoli-merge-trees": "^3.0.1",
     "chalk": "2.4.2",
     "ember-cli-babel": "^7.1.3",
