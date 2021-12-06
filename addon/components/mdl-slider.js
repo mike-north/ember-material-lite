@@ -7,7 +7,7 @@ export default BaseComponent.extend({
   min: 0,
   max: 100,
   value: 0,
-  attributeBindings: ['type', 'min', 'max', 'value'],
+  attributeBindings: ['type', 'min', 'max', 'value', 'step'],
   primaryClassName: 'slider',
   layout,
   didInsertElement() {
