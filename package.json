@@ -61,7 +61,7 @@
     "loader.js": "4.7.0",
     "qunit-dom": "2.0.0",
     "sass": "1.15.3",
-    "semantic-release": "15.12.5"
+    "semantic-release": "17.2.3"
   },
   "keywords": [
     "ember-addon"
