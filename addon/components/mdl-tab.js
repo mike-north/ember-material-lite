@@ -16,7 +16,16 @@ export default Component.extend(ChildComponentSupport, {
   classNames: ['mdl-tabs__panel'],
   classNameBindings: ['isActive:is-active'],
   isActive: false,
-  dasherizedTitle: computed('title', function() {
+
+  dasherizedTitle: computed('title', function () {
     return dasherize(this.title);
-  })
+  }),
+
+  init(...args) {
+    this._super(...args);
+
+    const isActive = this.title === this.composableParent.active;
+
+    this.set('isActive', isActive);
+  },
 });
