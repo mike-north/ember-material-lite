@@ -1,26 +1,23 @@
 import { A } from '@ember/array';
-import { next } from '@ember/runloop';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | mdl table', function(hooks) {
+const ROWS = A([
+  { id: 0, name: 'Hello' },
+  { id: 1, name: 'World' },
+]);
+
+module('Integration | Component | mdl table', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    assert.expect(5);
-
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });
-
+  test('it renders', async function (assert) {
     await render(hbs`{{mdl-table}}`);
+    assert.equal(this.element.textContent.trim(), '');
 
-    assert.equal(this.$().text().trim(), '');
+    this.set('rows', ROWS);
 
-    this.set('rows', new A([{ id: 0, name: 'Hello' }, { id: 1, name: 'World' }]));
-
-    // Template block usage:
     await render(hbs`
       {{#mdl-table content=rows as |row|}}
         {{#mdl-table-col label='Id'}}
@@ -32,11 +29,27 @@ module('Integration | Component | mdl table', function(hooks) {
       {{/mdl-table}}
     `);
 
-    next(() => {
-      assert.equal(this.$('thead tr:first-child th').length, 2, 'Two columns in header');
-      assert.equal(this.$('thead tr:first-child th').text(), 'IdName', 'Correct header labels');
-      assert.equal(this.$('tbody tr:first-child td').length, 2, 'Two columns in body');
-      assert.equal(this.$('tbody tr').length, 2, 'Two rows in body');
-    });
+    assert.equal(
+      this.element.querySelectorAll('thead tr:first-child th').length,
+      2,
+      'Two columns in header',
+    );
+    assert.equal(
+      this.element
+        .querySelector('thead tr:first-child')
+        .textContent.replace(/\s+/g, ''),
+      'IdName',
+      'Correct header labels',
+    );
+    assert.equal(
+      this.element.querySelectorAll('tbody tr:first-child td').length,
+      2,
+      'Two columns in body',
+    );
+    assert.equal(
+      this.element.querySelectorAll('tbody tr').length,
+      2,
+      'Two rows in body',
+    );
   });
 });
