@@ -10,13 +10,13 @@
     "build": "ember build",
     "lint:js": "eslint .",
     "start": "ember serve",
-    "test": "ember try:each",
+    "test": "ember test --reporter=dot",
     "semantic-release": "semantic-release"
   },
   "repository": "https://github.com/mike-north/ember-material-lite.git",
   "homepage": "https://github.com/mike-north/ember-material-lite",
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": ">= 12"
   },
   "author": "Mike North <michael.l.north@gmail.com> (http://mike.works)",
   "license": "MIT",
@@ -24,7 +24,7 @@
     "@commitlint/cli": "8.3.5",
     "@commitlint/config-conventional": "8.3.4",
     "@commitlint/travis-cli": "8.3.5",
-    "@ember/jquery": "0.6.1",
+    "@ember/jquery": "^0.6.1",
     "@ember/optional-features": "0.7.0",
     "@mike-north/js-lib-renovate-config": "1.1.5",
     "@mike-north/js-lib-semantic-release-config": "1.0.1",
@@ -51,10 +51,9 @@
     "ember-load-initializers": "2.1.2",
     "ember-maybe-import-regenerator": "0.1.6",
     "ember-resolver": "8.0.3",
-    "ember-source": "3.28.8",
+    "ember-source": "~3.28.11",
     "ember-source-channel-url": "2.0.1",
     "ember-truth-helpers": "2.1.0",
-    "ember-try": "1.2.1",
     "eslint-plugin-ember": "10.5.8",
     "eslint-plugin-node": "11.1.0",
     "husky": "2.4.1",
