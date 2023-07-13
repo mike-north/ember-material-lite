@@ -10,7 +10,9 @@ export default Mixin.create({
 
   _mdlComponentObserver: observer('_mdlComponent', function() {
     if (this.get('hasRipples')) {
-      let mdlripples = new window.MaterialRipple(this.$(`.${this.get('_rippleClass')}`)[0]);
+      const selector = `.${this.get("_rippleClass")}`;
+      const element = this.element.querySelectorAll(selector)[0];
+      let mdlripples = new window.MaterialRipple(element);
       this.set('_mdlRippleComponent', mdlripples);
     }
   })

@@ -2,8 +2,12 @@
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
+const environment = process.env.EMBER_ENV;
+const isTesting = environment === 'test';
+
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
+    hinting: !isTesting,
     sassOptions: {
       includePaths: ['node_modules/material-design-lite/src']
     }

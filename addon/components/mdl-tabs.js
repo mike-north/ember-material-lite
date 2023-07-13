@@ -1,4 +1,6 @@
-// import Ember from 'ember';
+/* eslint-disable ember/no-mixins */
+import { action } from '@ember/object';
+import { scheduleOnce } from '@ember/runloop';
 import BaseComponent from './-base-toplevel-component';
 import RippleSupport from '../mixins/ripple-support';
 import ParentComponentSupport from 'ember-composability/mixins/parent-component-support';
@@ -11,24 +13,28 @@ export default BaseComponent.extend(ParentComponentSupport, RippleSupport, {
   active: null,
   _mdlComponent: null,
   composableChildrenDebounceTime: 1,
-  didInsertElement() {
-    this._super(...arguments);
-    let mdltabs = new window.MaterialTabs(this.get('element'));
-    this.set('_mdlComponent', mdltabs);
-    let [activeTab] = this.get('composableChildren').filter((x) => x.title === this.get('active'));
-    if (activeTab) {
-      activeTab.set('isActive', true);
-    }
+
+  init(...args) {
+    this._super(...args);
+
+    scheduleOnce('afterRender', this, this.initMaterialTabs);
   },
 
-  actions: {
-    tabClicked(tab) {
-      let [activeTab] = this.get('composableChildren').filter((x) => x.title === this.get('active'));
-      if (activeTab) {
-        activeTab.set('isActive', false);
-      }
-      this.set('active', tab.get('title'));
-      tab.set('isActive', true);
+  initMaterialTabs() {
+    const mdltabs = new window.MaterialTabs(this.element);
+    this.set('_mdlComponent', mdltabs);
+  },
+
+  tabClicked: action(function (tab) {
+    const [activeTab] = this.composableChildren.filter(
+      ({ title }) => title === this.active,
+    );
+
+    if (activeTab) {
+      activeTab.set('isActive', false);
     }
-  }
+
+    this.set('active', tab.get('title'));
+    tab.set('isActive', true);
+  }),
 });

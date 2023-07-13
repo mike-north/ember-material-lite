@@ -9,7 +9,8 @@ export default Component.extend(ParentComponentSupport, {
   icon: 'more_vert',
   didInsertElement() {
     this._super(...arguments);
-    let mdlmenu = new window.MaterialMenu(this.$('ul')[0]);
+    const uLElement = this.element.querySelectorAll("ul")[0];
+    const mdlmenu = new window.MaterialMenu(uLElement);
     this.set('_mdlComponent', mdlmenu);
   },
   _buttonId: computed('elementId', {

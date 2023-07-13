@@ -1,35 +1,28 @@
-import $ from 'jquery';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-module('Integration | Component | mdl nav', function(hooks) {
+const BUTTON = '.mdl-layout__drawer-button';
+const VISIBLE_ITEM = '.mdl-layout__drawer.is-visible';
+const NAV_LINK =
+  '.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:last-child';
+
+module('Integration | Component | mdl nav', function (hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
-
-    // Template block usage:" + EOL +
+  test('it renders', async function (assert) {
     await render(hbs`
       {{#mdl-nav title="Nav Title"}}
         template block text
       {{/mdl-nav}}
     `);
 
-    assert.equal(this.$().text().trim().replace(/\s+/g, ''), 'NavTitleNavTitlemenutemplateblocktext');
+    const text = this.element.innerText.replace(/\s+/g, '');
+    assert.equal(text, 'NavTitleNavTitletemplateblocktext');
   });
 
-  test('with closeDrawerOnItemClick=false', async function(assert) {
-
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
-
-    // Template block usage:" + EOL +
-    let done = assert.async();
-
+  test('with closeDrawerOnItemClick=false', async function (assert) {
     await render(hbs`
       {{#mdl-nav title='Close on click'
         fixedHeader=true}}
@@ -45,27 +38,17 @@ module('Integration | Component | mdl nav', function(hooks) {
         </div>
       {{/mdl-nav}}
     `);
-    this.$('.mdl-layout__drawer-button').click();
-    setTimeout(() => {
-      assert.equal($('.mdl-layout__drawer.is-visible').length, 1, 'Drawer is open after click');
-      this.$('.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:last-child').click();
-      setTimeout(() => {
-        assert.equal($('.mdl-layout__drawer.is-visible').length, 1, 'Drawer is still open after second click');
-        done();
-      }, 100);
-    }, 100);
 
-    // assert.equal(this.$().text().trim().replace(/\s+/g, ''), 'NavTitleNavTitlemenutemplateblocktext');
+    await click(this.element.querySelector(BUTTON));
+    const isOpened = this.element.querySelectorAll(VISIBLE_ITEM).length;
+    assert.equal(isOpened, 1, 'Drawer is open after click');
+
+    await click(this.element.querySelector(NAV_LINK));
+    const { length } = this.element.querySelectorAll(VISIBLE_ITEM);
+    assert.equal(length, 1, 'Drawer is still open after second click');
   });
 
-  test('with closeDrawerOnItemClick=true', async function(assert) {
-
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.on('myAction', function(val) { ... });" + EOL + EOL +
-
-    // Template block usage:" + EOL +
-    let done = assert.async();
-
+  test('with closeDrawerOnItemClick=true', async function (assert) {
     await render(hbs`
       {{#mdl-nav title='Close on click'
         fixedHeader=true
@@ -82,16 +65,13 @@ module('Integration | Component | mdl nav', function(hooks) {
         </div>
       {{/mdl-nav}}
     `);
-    this.$('.mdl-layout__drawer-button').click();
-    setTimeout(() => {
-      assert.equal($('.mdl-layout__drawer.is-visible').length, 1, 'Drawer is open after click');
-      this.$('.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:last-child').click();
-      setTimeout(() => {
-        assert.equal($('.mdl-layout__drawer.is-visible').length, 0, 'Drawer is closed after second click');
-        done();
-      }, 100);
-    }, 100);
 
-    // assert.equal(this.$().text().trim().replace(/\s+/g, ''), 'NavTitleNavTitlemenutemplateblocktext');
+    await click(this.element.querySelector(BUTTON));
+    const isOpened = this.element.querySelectorAll(VISIBLE_ITEM).length;
+    assert.equal(isOpened, 1, 'Drawer is open after click');
+
+    await click(this.element.querySelector(NAV_LINK));
+    const { length } = this.element.querySelectorAll(VISIBLE_ITEM);
+    assert.equal(length, 0, 'Drawer is closed after second click');
   });
 });
