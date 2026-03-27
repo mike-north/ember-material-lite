@@ -56,7 +56,7 @@
     "ember-truth-helpers": "2.1.0",
     "ember-try": "1.2.1",
     "eslint-plugin-ember": "10.5.8",
-    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-n": "14.0.0",
     "husky": "2.4.1",
     "loader.js": "4.7.0",
     "qunit-dom": "2.0.0",
